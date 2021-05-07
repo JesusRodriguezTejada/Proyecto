@@ -9,6 +9,8 @@ public class Proyecto {
         // TODO code application logic here
         int x=0;
         //agregue una variable
+        System.out.println("Mundoo");
+        int f;
     }
     
 }
