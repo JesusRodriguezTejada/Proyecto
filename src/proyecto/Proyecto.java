@@ -11,7 +11,7 @@ public class Proyecto {
         //agregue una variable
         System.out.println("Mundoo");
         int f;
-        System.out.println("Nuevooooooo");
+        System.out.println("Nuevo");
         System.out.println("hola");
         //comentario
         x=20;
