@@ -20,7 +20,7 @@ public class MySqlConn {
             Class.forName("com.mysql.jdbc.Driver");
 
             String connectionUrl =
-                            "jdbc:mysql://localhost/hospital?"
+                            "jdbc:mysql://localhost/hotel?"
                             +"user=root&password=";
 
             // conexion con la bd
