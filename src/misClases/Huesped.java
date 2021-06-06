@@ -2,28 +2,62 @@ package misClases;
 
 public class Huesped {
     private String nombre;
-    private int numHabitacion;
-    private int piso;
     private String fechaIngreso;
     private String fechaSalida;
-    private int costo;
+    private Habitacion hab;
     private String tipoHabitacion;
-    
+    private int numHab;
+    private float totalPagar;
+
+    public String getTipoHabitacion() {
+        return tipoHabitacion;
+    }
+
+    public void setTipoHabitacion(String tipoHabitacion) {
+        this.tipoHabitacion = tipoHabitacion;
+    }
+
+    public int getNumHab() {
+        return numHab;
+    }
+
+    public void setNumHab(int numHab) {
+        this.numHab = numHab;
+    }
+
+    public float getTotalPagar() {
+        return totalPagar;
+    }
+
+    public void setTotalPagar(float totalPagar) {
+        this.totalPagar = totalPagar;
+    }
     
     
     public Huesped(){
     
     }
     
-    public Huesped(String nombre, int numHabitacion,int piso, String fechaIngreso,String fechaSalida,int costo, String tipoHabitacion){
+    public Huesped(String nombre, String fechaIngreso, String fechaSalida,Habitacion hab){
         this.nombre = nombre;
-        this.numHabitacion=numHabitacion;
-        this.piso=piso;
         this.fechaIngreso =fechaIngreso;
-        this.fechaSalida= fechaSalida;
-        this.tipoHabitacion=tipoHabitacion;
-        this.costo = costo;
+        this.fechaSalida=fechaSalida;
+        this.hab=hab;
         
+        
+    }
+
+    @Override
+    public String toString() {
+        return "Huesped{" + "nombre=" + nombre + ", fechaIngreso=" + fechaIngreso + ", fechaSalida=" + fechaSalida + ", hab=" + hab + '}';
+    }
+
+    public Habitacion getHab() {
+        return hab;
+    }
+
+    public void setHab(Habitacion hab) {
+        this.hab = hab;
     }
 
     public String getNombre() {
@@ -34,24 +68,22 @@ public class Huesped {
         this.nombre = nombre;
     }
 
-    public int getNumHabitacion() {
-        return numHabitacion;
+    public String getFechaIngreso() {
+        return fechaIngreso;
     }
 
-    public void setNumHabitacion(int numHabitacion) {
-        this.numHabitacion = numHabitacion;
+    public void setFechaIngreso(String fechaIngreso) {
+        this.fechaIngreso = fechaIngreso;
     }
 
-    public int getPiso() {
-        return piso;
+    public String getFechaSalida() {
+        return fechaSalida;
     }
 
-    public void setPiso(int piso) {
-        this.piso = piso;
+    public void setFechaSalida(String fechaSalida) {
+        this.fechaSalida = fechaSalida;
     }
 
-    @Override
-    public String toString() {
-        return "Huesped{" + "nombre=" + nombre + ", numHabitacion=" + numHabitacion + ", piso=" + piso + '}';
-    }
+    
+
 }
