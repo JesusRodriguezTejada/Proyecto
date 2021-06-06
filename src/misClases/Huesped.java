@@ -8,7 +8,7 @@ public class Huesped {
     private String tipoHabitacion;
     private int numHab;
     private float totalPagar;
-
+    
     public String getTipoHabitacion() {
         return tipoHabitacion;
     }

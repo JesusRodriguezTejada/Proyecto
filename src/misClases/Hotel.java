@@ -7,7 +7,22 @@ import java.util.ArrayList;
 public class Hotel {
     private float fianzas;
     private  ArrayList<Huesped> listaHupedes;
-    private Habitacion[] numHabitaciones;//fijar los datos de la lista 
+    private Habitacion[] CantidadHabitaciones;//fijar los datos de la lista 
+    public void llenarHotel(){
+        CantidadHabitaciones = new Habitacion[10];//vector de habitaciones cambiar por el numero crrecto 
+        CantidadHabitaciones[1].setCosto(200);
+        CantidadHabitaciones[1].setNumHabitacion(101);
+        CantidadHabitaciones[1].setPiso(1);
+        CantidadHabitaciones[1].setTipoHabitacion("lujo");
+        //llena todas las demas como las llene aqui 
+        //ademas que sean habitaciones diferentes si quieres cambia el nombre de lujo como que no me convence 
+        //checa  cauntas habitaciones pide gina por la neta solo hice el vector a lo menso XD
+        
+        //continia con las 2 y asi hasta que temines el vector
+        
+        
+        
+    }
 
     public float getFianzas() {
         return fianzas;
@@ -32,13 +47,5 @@ public class Hotel {
            this.listaHupedes = listaHupedes;
     }
 
-    public Habitacion[] getNumHabitaciones() {
-        return numHabitaciones;
-        
-    }
-
-    public void setNumHabitaciones(Habitacion[] numHabitaciones) {
-        this.numHabitaciones = numHabitaciones;
-    }
     
 }
