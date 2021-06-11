@@ -5,6 +5,8 @@
  */
 package misClases;
 
+import java.awt.Color;
+import misClases.Hotel;
 /**
  *
  * @author Alondra paulina v
@@ -16,6 +18,7 @@ public class PisosHotel extends javax.swing.JFrame {
      */
     public PisosHotel() {
         initComponents();
+         EstaOcupada();
     }
 
     /**
@@ -28,21 +31,21 @@ public class PisosHotel extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanelPisoUno = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
-        jButton15 = new javax.swing.JButton();
+        jButtonHab102 = new javax.swing.JButton();
+        jButtonHab101 = new javax.swing.JButton();
+        jButtonHab100 = new javax.swing.JButton();
+        jButtonHab105 = new javax.swing.JButton();
+        jButtonHab104 = new javax.swing.JButton();
+        jButtonHab103 = new javax.swing.JButton();
+        jButtonHab108 = new javax.swing.JButton();
+        jButtonHab107 = new javax.swing.JButton();
+        jButtonHab106 = new javax.swing.JButton();
+        jButtonHab111 = new javax.swing.JButton();
+        jButtonHab110 = new javax.swing.JButton();
+        jButtonHab109 = new javax.swing.JButton();
+        jButtonHab114 = new javax.swing.JButton();
+        jButtonHab113 = new javax.swing.JButton();
+        jButtonHab112 = new javax.swing.JButton();
         jButton16 = new javax.swing.JButton();
         jButton17 = new javax.swing.JButton();
         jButton18 = new javax.swing.JButton();
@@ -51,73 +54,79 @@ public class PisosHotel extends javax.swing.JFrame {
         jButton21 = new javax.swing.JButton();
         jPanelPiso2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jButton22 = new javax.swing.JButton();
-        jButton23 = new javax.swing.JButton();
-        jButton24 = new javax.swing.JButton();
-        jButton25 = new javax.swing.JButton();
-        jButton26 = new javax.swing.JButton();
-        jButton27 = new javax.swing.JButton();
-        jButton28 = new javax.swing.JButton();
-        jButton29 = new javax.swing.JButton();
-        jButton30 = new javax.swing.JButton();
-        jButton31 = new javax.swing.JButton();
-        jButton32 = new javax.swing.JButton();
-        jButton33 = new javax.swing.JButton();
-        jButton34 = new javax.swing.JButton();
-        jButton35 = new javax.swing.JButton();
-        jButton36 = new javax.swing.JButton();
+        jButtonHab115 = new javax.swing.JButton();
+        jButtonHab116 = new javax.swing.JButton();
+        jButtonHab117 = new javax.swing.JButton();
+        jButtonHab118 = new javax.swing.JButton();
+        jButtonHab119 = new javax.swing.JButton();
+        jButtonHab120 = new javax.swing.JButton();
+        jButtonHab121 = new javax.swing.JButton();
+        jButtonHab122 = new javax.swing.JButton();
+        jButtonHab123 = new javax.swing.JButton();
+        jButtonHab124 = new javax.swing.JButton();
+        jButtonHab125 = new javax.swing.JButton();
+        jButtonHab126 = new javax.swing.JButton();
+        jButtonHab127 = new javax.swing.JButton();
+        jButtonHab128 = new javax.swing.JButton();
+        jButtonHab129 = new javax.swing.JButton();
         jButton37 = new javax.swing.JButton();
         jButton38 = new javax.swing.JButton();
         jButton39 = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanelPisoUno.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton1.setBackground(new java.awt.Color(213, 131, 44));
-        jButton1.setText("102");
+        jButtonHab102.setBackground(new java.awt.Color(213, 131, 44));
+        jButtonHab102.setText("102");
 
-        jButton2.setBackground(new java.awt.Color(213, 131, 44));
-        jButton2.setText("101");
+        jButtonHab101.setBackground(new java.awt.Color(213, 131, 44));
+        jButtonHab101.setText("101");
 
-        jButton3.setBackground(new java.awt.Color(213, 131, 44));
-        jButton3.setText("100");
+        jButtonHab100.setBackground(new java.awt.Color(213, 131, 44));
+        jButtonHab100.setText("100");
+        jButtonHab100.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab100ActionPerformed(evt);
+            }
+        });
 
-        jButton4.setBackground(new java.awt.Color(245, 230, 104));
-        jButton4.setText("105");
+        jButtonHab105.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab105.setText("105");
 
-        jButton5.setBackground(new java.awt.Color(213, 131, 44));
-        jButton5.setText("104");
+        jButtonHab104.setBackground(new java.awt.Color(213, 131, 44));
+        jButtonHab104.setText("104");
 
-        jButton6.setBackground(new java.awt.Color(213, 131, 44));
-        jButton6.setText("103");
+        jButtonHab103.setBackground(new java.awt.Color(213, 131, 44));
+        jButtonHab103.setText("103");
 
-        jButton7.setBackground(new java.awt.Color(245, 230, 104));
-        jButton7.setText("108");
+        jButtonHab108.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab108.setText("108");
 
-        jButton8.setBackground(new java.awt.Color(245, 230, 104));
-        jButton8.setText("107");
+        jButtonHab107.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab107.setText("107");
 
-        jButton9.setBackground(new java.awt.Color(245, 230, 104));
-        jButton9.setText("106");
+        jButtonHab106.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab106.setText("106");
 
-        jButton10.setBackground(new java.awt.Color(243, 181, 108));
-        jButton10.setText("111");
+        jButtonHab111.setBackground(new java.awt.Color(243, 181, 108));
+        jButtonHab111.setText("111");
 
-        jButton11.setBackground(new java.awt.Color(243, 181, 108));
-        jButton11.setText("110");
+        jButtonHab110.setBackground(new java.awt.Color(243, 181, 108));
+        jButtonHab110.setText("110");
 
-        jButton12.setBackground(new java.awt.Color(245, 230, 104));
-        jButton12.setText("109");
+        jButtonHab109.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab109.setText("109");
 
-        jButton13.setBackground(new java.awt.Color(213, 131, 44));
-        jButton13.setText("114");
+        jButtonHab114.setBackground(new java.awt.Color(213, 131, 44));
+        jButtonHab114.setText("114");
 
-        jButton14.setBackground(new java.awt.Color(213, 131, 44));
-        jButton14.setText("113");
+        jButtonHab113.setBackground(new java.awt.Color(213, 131, 44));
+        jButtonHab113.setText("113");
 
-        jButton15.setBackground(new java.awt.Color(243, 181, 108));
-        jButton15.setText("112");
+        jButtonHab112.setBackground(new java.awt.Color(243, 181, 108));
+        jButtonHab112.setText("112");
 
         jButton16.setText("Alberca con vista al mar");
 
@@ -143,48 +152,51 @@ public class PisosHotel extends javax.swing.JFrame {
                 .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanelPisoUnoLayout.createSequentialGroup()
-                        .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
                         .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanelPisoUnoLayout.createSequentialGroup()
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton19)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
+                        .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanelPisoUnoLayout.createSequentialGroup()
+                                .addComponent(jButton20, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(9, 9, 9))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                 .addGroup(jPanelPisoUnoLayout.createSequentialGroup()
-                                    .addComponent(jButton9, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab106, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton8, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab107, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButtonHab108, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanelPisoUnoLayout.createSequentialGroup()
-                                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab103, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab104, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButtonHab105, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanelPisoUnoLayout.createSequentialGroup()
-                                    .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab109, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab110, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButtonHab111, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(jPanelPisoUnoLayout.createSequentialGroup()
-                                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab100, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(18, 18, 18)
-                                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab101, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jButtonHab102, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelPisoUnoLayout.createSequentialGroup()
-                                .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonHab112, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonHab113, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanelPisoUnoLayout.createSequentialGroup()
-                                .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jButton20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton19, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton21, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButtonHab114, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(36, 36, 36))))
         );
         jPanelPisoUnoLayout.setVerticalGroup(
@@ -195,24 +207,23 @@ public class PisosHotel extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jButton19)
-                            .addComponent(jButton21))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton20)
-                        .addGap(14, 14, 14)
+                            .addComponent(jButton21)
+                            .addComponent(jButton20))
+                        .addGap(58, 58, 58)
                         .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonHab102, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab101, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab100, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonHab105, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab104, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab103, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                         .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-                            .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-                            .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)))
+                            .addComponent(jButtonHab108, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                            .addComponent(jButtonHab106, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
+                            .addComponent(jButtonHab107, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)))
                     .addGroup(jPanelPisoUnoLayout.createSequentialGroup()
                         .addGap(102, 102, 102)
                         .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -220,14 +231,14 @@ public class PisosHotel extends javax.swing.JFrame {
                 .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelPisoUnoLayout.createSequentialGroup()
                         .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton12, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonHab109, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab110, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab111, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanelPisoUnoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton13, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton14, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButtonHab114, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab113, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab112, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jButton17, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton18, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -239,61 +250,65 @@ public class PisosHotel extends javax.swing.JFrame {
 
         jLabel2.setText("Piso 2");
 
-        jButton22.setBackground(new java.awt.Color(245, 230, 104));
-        jButton22.setText("115");
+        jButtonHab115.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab115.setText("115");
 
-        jButton23.setBackground(new java.awt.Color(245, 230, 104));
-        jButton23.setText("116");
+        jButtonHab116.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab116.setText("116");
 
-        jButton24.setBackground(new java.awt.Color(245, 230, 104));
-        jButton24.setText("117");
+        jButtonHab117.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab117.setText("117");
 
-        jButton25.setBackground(new java.awt.Color(245, 230, 104));
-        jButton25.setText("118");
+        jButtonHab118.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab118.setText("118");
 
-        jButton26.setBackground(new java.awt.Color(245, 230, 104));
-        jButton26.setText("119");
+        jButtonHab119.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab119.setText("119");
 
-        jButton27.setBackground(new java.awt.Color(245, 230, 104));
-        jButton27.setText("120");
+        jButtonHab120.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab120.setText("120");
 
-        jButton28.setBackground(new java.awt.Color(243, 181, 108));
-        jButton28.setText("121");
-        jButton28.addActionListener(new java.awt.event.ActionListener() {
+        jButtonHab121.setBackground(new java.awt.Color(243, 181, 108));
+        jButtonHab121.setText("121");
+        jButtonHab121.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton28ActionPerformed(evt);
+                jButtonHab121ActionPerformed(evt);
             }
         });
 
-        jButton29.setBackground(new java.awt.Color(243, 181, 108));
-        jButton29.setText("122");
+        jButtonHab122.setBackground(new java.awt.Color(243, 181, 108));
+        jButtonHab122.setText("122");
 
-        jButton30.setBackground(new java.awt.Color(243, 181, 108));
-        jButton30.setText("123");
+        jButtonHab123.setBackground(new java.awt.Color(243, 181, 108));
+        jButtonHab123.setText("123");
 
-        jButton31.setBackground(new java.awt.Color(243, 181, 108));
-        jButton31.setText("124");
+        jButtonHab124.setBackground(new java.awt.Color(243, 181, 108));
+        jButtonHab124.setText("124");
 
-        jButton32.setBackground(new java.awt.Color(243, 181, 108));
-        jButton32.setText("125");
+        jButtonHab125.setBackground(new java.awt.Color(243, 181, 108));
+        jButtonHab125.setText("125");
 
-        jButton33.setBackground(new java.awt.Color(243, 181, 108));
-        jButton33.setText("126");
+        jButtonHab126.setBackground(new java.awt.Color(243, 181, 108));
+        jButtonHab126.setText("126");
 
-        jButton34.setBackground(new java.awt.Color(245, 230, 104));
-        jButton34.setText("127");
+        jButtonHab127.setBackground(new java.awt.Color(245, 230, 104));
+        jButtonHab127.setText("127");
 
-        jButton35.setBackground(new java.awt.Color(213, 131, 44));
-        jButton35.setText("128");
+        jButtonHab128.setBackground(new java.awt.Color(213, 131, 44));
+        jButtonHab128.setText("128");
 
-        jButton36.setBackground(new java.awt.Color(213, 131, 44));
-        jButton36.setText("129");
+        jButtonHab129.setBackground(new java.awt.Color(213, 131, 44));
+        jButtonHab129.setText("129");
 
         jButton37.setText("Guarderia");
 
         jButton38.setText("Spa");
 
         jButton39.setText("Area de video Juegos");
+
+        jButton1.setBackground(new java.awt.Color(51, 51, 51));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Continuar");
 
         javax.swing.GroupLayout jPanelPiso2Layout = new javax.swing.GroupLayout(jPanelPiso2);
         jPanelPiso2.setLayout(jPanelPiso2Layout);
@@ -305,24 +320,24 @@ public class PisosHotel extends javax.swing.JFrame {
                     .addGroup(jPanelPiso2Layout.createSequentialGroup()
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButtonHab118, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonHab121, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonHab115, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelPiso2Layout.createSequentialGroup()
                                 .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jButtonHab119, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab122, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jButtonHab116, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(18, 18, 18)
                                 .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanelPiso2Layout.createSequentialGroup()
                                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(jButtonHab117, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButtonHab123, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                            .addComponent(jButtonHab120, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(0, 0, Short.MAX_VALUE))
                                     .addGroup(jPanelPiso2Layout.createSequentialGroup()
                                         .addGap(122, 122, 122)
@@ -331,20 +346,24 @@ public class PisosHotel extends javax.swing.JFrame {
                     .addGroup(jPanelPiso2Layout.createSequentialGroup()
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelPiso2Layout.createSequentialGroup()
-                                .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonHab127, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonHab128, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButtonHab129, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanelPiso2Layout.createSequentialGroup()
-                                .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonHab124, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonHab125, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButtonHab126, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(27, 27, 27)
                         .addComponent(jButton38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(jPanelPiso2Layout.createSequentialGroup()
+                .addGap(243, 243, 243)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelPiso2Layout.setVerticalGroup(
             jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -357,21 +376,21 @@ public class PisosHotel extends javax.swing.JFrame {
                         .addComponent(jButton37, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton22, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton23, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton24, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jButtonHab115, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonHab116, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButtonHab117, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanelPiso2Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton25, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton26, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton27, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonHab118, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab119, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab120, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jButton28, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton29, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton30, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButtonHab121, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab122, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab123, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanelPiso2Layout.createSequentialGroup()
                         .addGap(24, 24, 24)
                         .addComponent(jButton39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -379,15 +398,17 @@ public class PisosHotel extends javax.swing.JFrame {
                 .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelPiso2Layout.createSequentialGroup()
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton31, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton32, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton33, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jButtonHab124, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab125, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab126, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton34, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton35, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton36, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jButtonHab127, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab128, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonHab129, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addComponent(jButton1)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -397,7 +418,7 @@ public class PisosHotel extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanelPisoUno, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 127, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
                 .addComponent(jPanelPiso2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
@@ -411,9 +432,44 @@ public class PisosHotel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton28ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton28ActionPerformed
+    private void jButtonHab121ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab121ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton28ActionPerformed
+    }//GEN-LAST:event_jButtonHab121ActionPerformed
+    public void EstaOcupada(){
+        Habitacion[] aux;
+        aux = new Habitacion[30];
+       // aux= new Habitacion[30];
+
+        int op=0 ;
+          jButtonHab100.setBackground(Color.BLACK);
+          jButtonHab100.setText("ocupado");
+          for(int i=0;.size>=i;i++){
+          }
+        switch(op){
+            case 1:
+                jButtonHab100.setBackground(Color.BLACK);
+                jButtonHab100.setText("Ocupado"); 
+                
+                break;
+            case 2:
+                
+                break;
+            case 3:
+                
+                break;
+            case 4:
+                
+                break;
+             
+                
+        }
+    }
+    
+    private void jButtonHab100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab100ActionPerformed
+       // TODO add your handling code here:
+           jButtonHab100.setBackground(Color.BLACK);
+           jButtonHab100.setText("Ocupado");   
+    }//GEN-LAST:event_jButtonHab100ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -441,55 +497,60 @@ public class PisosHotel extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(PisosHotel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PisosHotel().setVisible(true);
+                new PisosHotel().setVisible(true); 
+                
             }
+   
         });
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
     private javax.swing.JButton jButton19;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton20;
     private javax.swing.JButton jButton21;
-    private javax.swing.JButton jButton22;
-    private javax.swing.JButton jButton23;
-    private javax.swing.JButton jButton24;
-    private javax.swing.JButton jButton25;
-    private javax.swing.JButton jButton26;
-    private javax.swing.JButton jButton27;
-    private javax.swing.JButton jButton28;
-    private javax.swing.JButton jButton29;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton30;
-    private javax.swing.JButton jButton31;
-    private javax.swing.JButton jButton32;
-    private javax.swing.JButton jButton33;
-    private javax.swing.JButton jButton34;
-    private javax.swing.JButton jButton35;
-    private javax.swing.JButton jButton36;
     private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButtonHab100;
+    private javax.swing.JButton jButtonHab101;
+    private javax.swing.JButton jButtonHab102;
+    private javax.swing.JButton jButtonHab103;
+    private javax.swing.JButton jButtonHab104;
+    private javax.swing.JButton jButtonHab105;
+    private javax.swing.JButton jButtonHab106;
+    private javax.swing.JButton jButtonHab107;
+    private javax.swing.JButton jButtonHab108;
+    private javax.swing.JButton jButtonHab109;
+    private javax.swing.JButton jButtonHab110;
+    private javax.swing.JButton jButtonHab111;
+    private javax.swing.JButton jButtonHab112;
+    private javax.swing.JButton jButtonHab113;
+    private javax.swing.JButton jButtonHab114;
+    private javax.swing.JButton jButtonHab115;
+    private javax.swing.JButton jButtonHab116;
+    private javax.swing.JButton jButtonHab117;
+    private javax.swing.JButton jButtonHab118;
+    private javax.swing.JButton jButtonHab119;
+    private javax.swing.JButton jButtonHab120;
+    private javax.swing.JButton jButtonHab121;
+    private javax.swing.JButton jButtonHab122;
+    private javax.swing.JButton jButtonHab123;
+    private javax.swing.JButton jButtonHab124;
+    private javax.swing.JButton jButtonHab125;
+    private javax.swing.JButton jButtonHab126;
+    private javax.swing.JButton jButtonHab127;
+    private javax.swing.JButton jButtonHab128;
+    private javax.swing.JButton jButtonHab129;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanelPiso2;
     private javax.swing.JPanel jPanelPisoUno;

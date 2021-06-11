@@ -364,7 +364,7 @@ public class Presentacion extends javax.swing.JFrame {
         usuario = this.jTextFieldNuevoUsuario.getText().trim();
         char[] palabraclave = this.jPasswordNuevaContraseña.getPassword();
         
-       // contraseña = new String (passw);
+       // contraseña = new String (passw);F
         contraseña = new String (palabraclave);
         parte1 = "insert into contraseñas values (";
         parte2 = "'" + usuario + "'," + " MD5('" + contraseña + "'))";

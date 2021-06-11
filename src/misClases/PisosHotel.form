@@ -25,7 +25,7 @@
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanelPisoUno" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="127" max="32767" attributes="0"/>
+              <EmptySpace pref="88" max="32767" attributes="0"/>
               <Component id="jPanelPiso2" min="-2" max="-2" attributes="0"/>
           </Group>
       </Group>
@@ -56,56 +56,60 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="jButton18" alignment="0" max="32767" attributes="0"/>
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="jButton16" max="32767" attributes="0"/>
-                              <Component id="jButton17" max="32767" attributes="0"/>
-                          </Group>
-                          <EmptySpace pref="25" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jButton16" max="32767" attributes="0"/>
+                                  <Component id="jButton17" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
+                                  <Component id="jButton19" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace pref="19" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Component id="jButton20" min="-2" pref="138" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Component id="jButton21" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
+                              </Group>
                               <Group type="103" alignment="1" groupAlignment="1" attributes="0">
                                   <Group type="102" attributes="0">
-                                      <Component id="jButton9" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab106" min="-2" pref="95" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Component id="jButton8" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab107" min="-2" pref="95" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jButton7" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab108" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" attributes="0">
-                                      <Component id="jButton6" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab103" min="-2" pref="95" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Component id="jButton5" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab104" min="-2" pref="95" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jButton4" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab105" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="jButton12" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab109" min="-2" pref="95" max="-2" attributes="0"/>
                                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                                      <Component id="jButton11" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab110" min="-2" pref="95" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jButton10" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab111" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
                                   <Group type="102" alignment="1" attributes="0">
-                                      <Component id="jButton3" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab100" min="-2" pref="95" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                                      <Component id="jButton2" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab101" min="-2" pref="95" max="-2" attributes="0"/>
                                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                      <Component id="jButton1" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab102" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="1" attributes="0">
-                                  <Component id="jButton15" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab112" min="-2" pref="95" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jButton14" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab113" min="-2" pref="95" max="-2" attributes="0"/>
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                                  <Component id="jButton13" min="-2" pref="95" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                                      <Component id="jButton20" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="jButton19" alignment="0" max="32767" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="jButton21" min="-2" pref="125" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab114" min="-2" pref="95" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
@@ -123,26 +127,25 @@
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="jButton19" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButton20" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="jButton20" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="58" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton1" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton2" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton3" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab102" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab101" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab100" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton4" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton5" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton6" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab105" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab104" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab103" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace pref="12" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton7" pref="66" max="32767" attributes="0"/>
-                              <Component id="jButton9" pref="66" max="32767" attributes="0"/>
-                              <Component id="jButton8" alignment="0" pref="66" max="32767" attributes="0"/>
+                              <Component id="jButtonHab108" pref="66" max="32767" attributes="0"/>
+                              <Component id="jButtonHab106" pref="66" max="32767" attributes="0"/>
+                              <Component id="jButtonHab107" alignment="0" pref="66" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
@@ -154,15 +157,15 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton12" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton11" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton10" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab109" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab110" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab111" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton13" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton14" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton15" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab114" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab113" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab112" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jButton17" min="-2" pref="138" max="-2" attributes="0"/>
@@ -175,7 +178,7 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="jButtonHab102">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2c" green="83" red="d5" type="rgb"/>
@@ -183,7 +186,7 @@
             <Property name="text" type="java.lang.String" value="102"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="jButtonHab101">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2c" green="83" red="d5" type="rgb"/>
@@ -191,15 +194,18 @@
             <Property name="text" type="java.lang.String" value="101"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton3">
+        <Component class="javax.swing.JButton" name="jButtonHab100">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2c" green="83" red="d5" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="100"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab100ActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="jButtonHab105">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -207,7 +213,7 @@
             <Property name="text" type="java.lang.String" value="105"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="jButtonHab104">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2c" green="83" red="d5" type="rgb"/>
@@ -215,7 +221,7 @@
             <Property name="text" type="java.lang.String" value="104"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton6">
+        <Component class="javax.swing.JButton" name="jButtonHab103">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2c" green="83" red="d5" type="rgb"/>
@@ -223,7 +229,7 @@
             <Property name="text" type="java.lang.String" value="103"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton7">
+        <Component class="javax.swing.JButton" name="jButtonHab108">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -231,7 +237,7 @@
             <Property name="text" type="java.lang.String" value="108"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton8">
+        <Component class="javax.swing.JButton" name="jButtonHab107">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -239,7 +245,7 @@
             <Property name="text" type="java.lang.String" value="107"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton9">
+        <Component class="javax.swing.JButton" name="jButtonHab106">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -247,7 +253,7 @@
             <Property name="text" type="java.lang.String" value="106"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton10">
+        <Component class="javax.swing.JButton" name="jButtonHab111">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6c" green="b5" red="f3" type="rgb"/>
@@ -255,7 +261,7 @@
             <Property name="text" type="java.lang.String" value="111"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton11">
+        <Component class="javax.swing.JButton" name="jButtonHab110">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6c" green="b5" red="f3" type="rgb"/>
@@ -263,7 +269,7 @@
             <Property name="text" type="java.lang.String" value="110"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton12">
+        <Component class="javax.swing.JButton" name="jButtonHab109">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -271,7 +277,7 @@
             <Property name="text" type="java.lang.String" value="109"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton13">
+        <Component class="javax.swing.JButton" name="jButtonHab114">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2c" green="83" red="d5" type="rgb"/>
@@ -279,7 +285,7 @@
             <Property name="text" type="java.lang.String" value="114"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton14">
+        <Component class="javax.swing.JButton" name="jButtonHab113">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2c" green="83" red="d5" type="rgb"/>
@@ -287,7 +293,7 @@
             <Property name="text" type="java.lang.String" value="113"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton15">
+        <Component class="javax.swing.JButton" name="jButtonHab112">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6c" green="b5" red="f3" type="rgb"/>
@@ -355,9 +361,9 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="103" alignment="0" groupAlignment="0" attributes="0">
-                                  <Component id="jButton25" min="-2" pref="95" max="-2" attributes="0"/>
-                                  <Component id="jButton28" min="-2" pref="95" max="-2" attributes="0"/>
-                                  <Component id="jButton22" alignment="1" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab118" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab121" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab115" alignment="1" min="-2" pref="95" max="-2" attributes="0"/>
                               </Group>
                               <Component id="jLabel2" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                           </Group>
@@ -365,17 +371,17 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="jButton26" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="jButton29" min="-2" pref="95" max="-2" attributes="0"/>
-                                      <Component id="jButton23" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab119" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab122" min="-2" pref="95" max="-2" attributes="0"/>
+                                      <Component id="jButtonHab116" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="1" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
-                                              <Component id="jButton24" min="-2" pref="95" max="-2" attributes="0"/>
-                                              <Component id="jButton30" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
-                                              <Component id="jButton27" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
+                                              <Component id="jButtonHab117" min="-2" pref="95" max="-2" attributes="0"/>
+                                              <Component id="jButtonHab123" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
+                                              <Component id="jButtonHab120" alignment="0" min="-2" pref="95" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                                       </Group>
@@ -391,18 +397,18 @@
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jButton34" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab127" min="-2" pref="95" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jButton35" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab128" min="-2" pref="95" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jButton36" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab129" min="-2" pref="95" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jButton31" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab124" min="-2" pref="95" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jButton32" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab125" min="-2" pref="95" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Component id="jButton33" min="-2" pref="95" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab126" min="-2" pref="95" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -410,6 +416,11 @@
                       </Group>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="243" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -426,23 +437,23 @@
                   </Group>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="jButton22" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Component id="jButton23" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Component id="jButton24" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="jButtonHab115" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="jButtonHab116" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                      <Component id="jButtonHab117" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" max="-2" attributes="0">
                       <Group type="102" attributes="0">
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton25" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton26" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton27" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab118" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab119" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab120" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="jButton28" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton29" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton30" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab121" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab122" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab123" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="102" attributes="0">
@@ -454,19 +465,21 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton31" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton32" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton33" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab124" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab125" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab126" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton34" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton35" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButton36" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab127" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab128" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jButtonHab129" min="-2" pref="60" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Component id="jButton38" min="-2" pref="138" max="-2" attributes="0"/>
                   </Group>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -478,7 +491,7 @@
             <Property name="text" type="java.lang.String" value="Piso 2"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton22">
+        <Component class="javax.swing.JButton" name="jButtonHab115">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -486,7 +499,7 @@
             <Property name="text" type="java.lang.String" value="115"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton23">
+        <Component class="javax.swing.JButton" name="jButtonHab116">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -494,7 +507,7 @@
             <Property name="text" type="java.lang.String" value="116"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton24">
+        <Component class="javax.swing.JButton" name="jButtonHab117">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -502,7 +515,7 @@
             <Property name="text" type="java.lang.String" value="117"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton25">
+        <Component class="javax.swing.JButton" name="jButtonHab118">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -510,7 +523,7 @@
             <Property name="text" type="java.lang.String" value="118"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton26">
+        <Component class="javax.swing.JButton" name="jButtonHab119">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -518,7 +531,7 @@
             <Property name="text" type="java.lang.String" value="119"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton27">
+        <Component class="javax.swing.JButton" name="jButtonHab120">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -526,7 +539,7 @@
             <Property name="text" type="java.lang.String" value="120"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton28">
+        <Component class="javax.swing.JButton" name="jButtonHab121">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6c" green="b5" red="f3" type="rgb"/>
@@ -534,10 +547,10 @@
             <Property name="text" type="java.lang.String" value="121"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton28ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab121ActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton29">
+        <Component class="javax.swing.JButton" name="jButtonHab122">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6c" green="b5" red="f3" type="rgb"/>
@@ -545,7 +558,7 @@
             <Property name="text" type="java.lang.String" value="122"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton30">
+        <Component class="javax.swing.JButton" name="jButtonHab123">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6c" green="b5" red="f3" type="rgb"/>
@@ -553,7 +566,7 @@
             <Property name="text" type="java.lang.String" value="123"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton31">
+        <Component class="javax.swing.JButton" name="jButtonHab124">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6c" green="b5" red="f3" type="rgb"/>
@@ -561,7 +574,7 @@
             <Property name="text" type="java.lang.String" value="124"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton32">
+        <Component class="javax.swing.JButton" name="jButtonHab125">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6c" green="b5" red="f3" type="rgb"/>
@@ -569,7 +582,7 @@
             <Property name="text" type="java.lang.String" value="125"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton33">
+        <Component class="javax.swing.JButton" name="jButtonHab126">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="6c" green="b5" red="f3" type="rgb"/>
@@ -577,7 +590,7 @@
             <Property name="text" type="java.lang.String" value="126"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton34">
+        <Component class="javax.swing.JButton" name="jButtonHab127">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="68" green="e6" red="f5" type="rgb"/>
@@ -585,7 +598,7 @@
             <Property name="text" type="java.lang.String" value="127"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton35">
+        <Component class="javax.swing.JButton" name="jButtonHab128">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2c" green="83" red="d5" type="rgb"/>
@@ -593,7 +606,7 @@
             <Property name="text" type="java.lang.String" value="128"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton36">
+        <Component class="javax.swing.JButton" name="jButtonHab129">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="2c" green="83" red="d5" type="rgb"/>
@@ -614,6 +627,17 @@
         <Component class="javax.swing.JButton" name="jButton39">
           <Properties>
             <Property name="text" type="java.lang.String" value="Area de video Juegos"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="33" green="33" red="33" type="rgb"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Continuar"/>
           </Properties>
         </Component>
       </SubComponents>
