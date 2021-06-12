@@ -27,7 +27,7 @@ public class Portada extends javax.swing.JFrame {
         //setLocationRelativeTo(null);
         //setResizable(false);
         setTitle("Portada");
-        ImageIcon wallpaper = new ImageIcon("src/misimagenes/Logo uaa.jpg");
+        ImageIcon wallpaper = new ImageIcon("src/misimagenes/Logo uaa.png");
         Icon icono = new ImageIcon(wallpaper.getImage().getScaledInstance(jLabelLogoUniversidad.getWidth(), jLabelLogoUniversidad.getHeight(), Image.SCALE_DEFAULT ));
         jLabelLogoUniversidad.setIcon(icono);
        this.repaint();

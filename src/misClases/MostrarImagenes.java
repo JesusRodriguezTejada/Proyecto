@@ -6,6 +6,9 @@
 package misClases;
 
 
+import java.applet.AudioClip;
+import java.awt.Image;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
 /**
@@ -13,6 +16,7 @@ import javax.swing.ImageIcon;
  * @author Alondra paulina v
  */
 public class MostrarImagenes extends javax.swing.JFrame {
+AudioClip sonido;
 //ImageIcon Imagen[] = new ImageIcon[12];
 ImageIcon Imagen [] = new ImageIcon[12]; 
 int contador =1;
@@ -21,7 +25,32 @@ int contador =1;
      */
     public MostrarImagenes() {
         initComponents();
-        this.setTitle("Imagenes");
+        //logo del hotel
+        ImageIcon logo = new ImageIcon("src/misimagenes/hotelsunset2.png");
+        Icon logotipo = new ImageIcon(logo.getImage().getScaledInstance(jLabelLogo.getWidth(), jLabelLogo.getHeight(), Image.SCALE_DEFAULT ));
+        jLabelLogo.setIcon(logotipo);
+        //botonanterior
+        ImageIcon boton1 = new ImageIcon("src/misimagenes/anterior.jpg");
+        Icon anterior = new ImageIcon(boton1.getImage().getScaledInstance(jButtonAnterior.getWidth(), jButtonAnterior.getHeight(), Image.SCALE_DEFAULT ));
+        jButtonAnterior.setIcon(anterior);
+        //botonsiguiente
+        ImageIcon boton2 = new ImageIcon("src/misimagenes/siguiente.jpg");
+        Icon siguiente = new ImageIcon(boton2.getImage().getScaledInstance(jButtonSiguiente.getWidth(), jButtonSiguiente.getHeight(), Image.SCALE_DEFAULT ));
+        jButtonSiguiente.setIcon(siguiente);
+        //musica
+        ImageIcon simbolo = new ImageIcon("src/misimagenes/music.jpg");
+        Icon musica = new ImageIcon(simbolo.getImage().getScaledInstance(jLabelMusica.getWidth(), jLabelMusica.getHeight(), Image.SCALE_DEFAULT ));
+        jLabelMusica.setIcon(musica);
+        //botones musica
+        ImageIcon play = new ImageIcon("src/misimagenes/play.jpg");
+        Icon botonplay = new ImageIcon(play.getImage().getScaledInstance(jButtonPlay.getWidth(), jButtonPlay.getHeight(), Image.SCALE_DEFAULT ));
+        jButtonPlay.setIcon(botonplay);
+        //
+        ImageIcon stop = new ImageIcon("src/misimagenes/stop.jpg");
+        Icon botonstop = new ImageIcon(stop.getImage().getScaledInstance(jButtonStop.getWidth(), jButtonStop.getHeight(), Image.SCALE_DEFAULT ));
+        jButtonStop.setIcon(botonstop);
+        //galeria de imagenes
+        this.setTitle("Galeria");
         for(int i=1; i<11; i++){
          Imagen[i] = new ImageIcon (getClass().getResource("/misimagenes/fot"+i+".jpg"));
               //  Imagen[i] = new ImageIcon (getClass().getResource("/misimagenes/fot1.jpg"));
@@ -41,14 +70,18 @@ int contador =1;
         jPanel1 = new javax.swing.JPanel();
         jLabelMostrarImagen = new javax.swing.JLabel();
         jButtonSiguiente = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButtonAnterior = new javax.swing.JButton();
+        jLabelLogo = new javax.swing.JLabel();
+        jLabelMusica = new javax.swing.JLabel();
+        jButtonPlay = new javax.swing.JButton();
+        jButtonStop = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setExtendedState(6);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 224));
 
-        jLabelMostrarImagen.setText("jLabel1");
+        jLabelMostrarImagen.setBorder(javax.swing.BorderFactory.createEmptyBorder(2, 2, 2, 2));
 
         jButtonSiguiente.setText("Siguiente");
         jButtonSiguiente.addActionListener(new java.awt.event.ActionListener() {
@@ -57,10 +90,28 @@ int contador =1;
             }
         });
 
-        jButton1.setText("Anterior");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAnterior.setText("Anterior");
+        jButtonAnterior.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonAnteriorActionPerformed(evt);
+            }
+        });
+
+        jLabelLogo.setText("jLabel1");
+
+        jLabelMusica.setText("jLabel1");
+
+        jButtonPlay.setText("jButton1");
+        jButtonPlay.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonPlayActionPerformed(evt);
+            }
+        });
+
+        jButtonStop.setText("jButton2");
+        jButtonStop.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonStopActionPerformed(evt);
             }
         });
 
@@ -71,40 +122,61 @@ int contador =1;
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(143, 143, 143)
-                        .addComponent(jLabelMostrarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 743, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jButtonAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabelMusica, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonStop, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(12, 12, 12)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabelMostrarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 845, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButtonSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(299, 299, 299)
-                        .addComponent(jButtonSiguiente)
-                        .addGap(54, 54, 54)
-                        .addComponent(jButton1)))
-                .addContainerGap(148, Short.MAX_VALUE))
+                        .addGap(578, 578, 578)
+                        .addComponent(jLabelLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabelMostrarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 448, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabelLogo, javax.swing.GroupLayout.DEFAULT_SIZE, 110, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonSiguiente)
-                    .addComponent(jButton1))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButtonAnterior, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(97, 97, 97)
+                        .addComponent(jLabelMusica, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButtonPlay, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonStop, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabelMostrarImagen, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                    .addGap(162, 162, 162)
+                                    .addComponent(jButtonSiguiente, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGap(165, 165, 165))))
+                        .addContainerGap())))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
@@ -120,7 +192,7 @@ int contador =1;
         
     }//GEN-LAST:event_jButtonSiguienteActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonAnteriorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAnteriorActionPerformed
         // TODO add your handling code here:
         if (contador ==1){
             contador=11;
@@ -128,7 +200,18 @@ int contador =1;
         }
         contador --;
         jLabelMostrarImagen.setIcon(Imagen[contador]);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonAnteriorActionPerformed
+
+    private void jButtonPlayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonPlayActionPerformed
+        // TODO add your handling code here:
+        sonido = java.applet.Applet.newAudioClip(getClass().getResource("/misClases/PIMPERS PARADISE.wav"));
+        sonido.play();
+    }//GEN-LAST:event_jButtonPlayActionPerformed
+
+    private void jButtonStopActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonStopActionPerformed
+        // TODO add your handling code here:
+          sonido.stop();
+    }//GEN-LAST:event_jButtonStopActionPerformed
 
     /**
      * @param args the command line arguments
@@ -166,9 +249,13 @@ int contador =1;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonAnterior;
+    private javax.swing.JButton jButtonPlay;
     private javax.swing.JButton jButtonSiguiente;
+    private javax.swing.JButton jButtonStop;
+    private javax.swing.JLabel jLabelLogo;
     private javax.swing.JLabel jLabelMostrarImagen;
+    private javax.swing.JLabel jLabelMusica;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
