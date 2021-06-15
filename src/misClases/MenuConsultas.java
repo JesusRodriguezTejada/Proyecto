@@ -164,7 +164,7 @@ public class MenuConsultas extends javax.swing.JFrame {
 
     private void jMenuItemOrdenadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOrdenadosActionPerformed
         // TODO add your handling code here:
-        Consult10 hola = new Consult10();
+        ConsultaOrdenAlfabetico hola = new ConsultaOrdenAlfabetico();
         hola.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuItemOrdenadosActionPerformed

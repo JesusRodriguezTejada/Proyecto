@@ -443,8 +443,9 @@ public class PisosHotel extends javax.swing.JFrame {
         int op=0 ;
           jButtonHab100.setBackground(Color.BLACK);
           jButtonHab100.setText("ocupado");
-          for(int i=0;.size>=i;i++){
-          }
+          //for(int i=0;.size>=i;i++){
+        
+          //}
         switch(op){
             case 1:
                 jButtonHab100.setBackground(Color.BLACK);
