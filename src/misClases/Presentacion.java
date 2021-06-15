@@ -17,7 +17,7 @@ import javax.swing.JPanel;
  *
  * @author Alondra paulina v
  */
-public class Presentacion extends javax.swing.JFrame {
+public final class Presentacion extends javax.swing.JFrame {
     AudioClip sonido;
     FondoPanel fondo = new FondoPanel();
     /**
@@ -26,6 +26,7 @@ public class Presentacion extends javax.swing.JFrame {
     public Presentacion() {
         this.setContentPane(fondo);
         initComponents();
+        TransparenciaButton();
         //logo
         ImageIcon wallpaper = new ImageIcon("src/misimagenes/hotel1.jpg");
         Icon icono = new ImageIcon(wallpaper.getImage().getScaledInstance(jLabelLogo.getWidth(), jLabelLogo.getHeight(), Image.SCALE_DEFAULT ));
@@ -112,9 +113,9 @@ public class Presentacion extends javax.swing.JFrame {
         jLabelHotel1.setText("jLabel6");
 
         jButton1.setBackground(new java.awt.Color(195, 66, 44));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Menu");
+        jButton1.setText("Iniciar sesion");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -274,14 +275,24 @@ public class Presentacion extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        MenuPrincipal Menu = new MenuPrincipal();
+        /*MenuPrincipal Menu = new MenuPrincipal();
         Menu.setVisible(true);
+        this.dispose();*/
+        
+        InicioSesion Sesion = new InicioSesion();
+        Sesion.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
      */
+    public void TransparenciaButton(){
+        jButton1.setOpaque(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setBorderPainted(false);
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
