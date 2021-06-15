@@ -197,7 +197,7 @@ public class Portada extends javax.swing.JFrame {
 
     private void jButtonIrAPresentacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIrAPresentacionActionPerformed
        
-        Presentacion form = new Presentacion();
+        Login form = new Login();
         form.setVisible(true);
         this.dispose();
         

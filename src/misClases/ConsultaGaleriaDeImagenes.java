@@ -15,7 +15,7 @@ import javax.swing.ImageIcon;
  *
  * @author Alondra paulina v
  */
-public class MostrarImagenes extends javax.swing.JFrame {
+public class ConsultaGaleriaDeImagenes extends javax.swing.JFrame {
 AudioClip sonido;
 //ImageIcon Imagen[] = new ImageIcon[12];
 ImageIcon Imagen [] = new ImageIcon[12]; 
@@ -23,7 +23,7 @@ int contador =1;
     /**
      * Creates new form MostrarImagenes
      */
-    public MostrarImagenes() {
+    public ConsultaGaleriaDeImagenes() {
         initComponents();
         //logo del hotel
         ImageIcon logo = new ImageIcon("src/misimagenes/hotelsunset2.png");
@@ -230,20 +230,21 @@ int contador =1;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MostrarImagenes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaGaleriaDeImagenes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MostrarImagenes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaGaleriaDeImagenes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MostrarImagenes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaGaleriaDeImagenes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MostrarImagenes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaGaleriaDeImagenes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new MostrarImagenes().setVisible(true);
+                new ConsultaGaleriaDeImagenes().setVisible(true);
             }
         });
     }

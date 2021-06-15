@@ -3,15 +3,17 @@
 package test;
 
 import controlMySql.MySqlConn;
-import misClases.Altas;
+import misClases.Checkin;
+import misClases.ConsultaPorNombre;
 import misClases.checkout;
 
 public class test {
     MySqlConn objConn=new MySqlConn();
     
     public test(){
-       //new Altas(objConn).setVisible(true);
-        new checkout(objConn).setVisible(true);
+       //new Checkin(objConn).setVisible(true);
+       //new checkout(objConn).setVisible(true);
+       //new ConsultaPorNombre(objConn).setVisible(true);
     }
     public static void main(String[] args) {
         new test();
