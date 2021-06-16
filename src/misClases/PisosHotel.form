@@ -185,6 +185,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="102"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab102ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab101">
           <Properties>
@@ -193,6 +196,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="101"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab101ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab100">
           <Properties>
@@ -212,6 +218,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="105"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab105ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab104">
           <Properties>
@@ -220,6 +229,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="104"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab104ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab103">
           <Properties>
@@ -228,6 +240,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="103"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab103ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab108">
           <Properties>
@@ -236,6 +251,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="108"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab108ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab107">
           <Properties>
@@ -244,6 +262,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="107"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab107ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab106">
           <Properties>
@@ -252,6 +273,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="106"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab106ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab111">
           <Properties>
@@ -260,6 +284,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="111"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab111ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab110">
           <Properties>
@@ -268,6 +295,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="110"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab110ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab109">
           <Properties>
@@ -276,6 +306,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="109"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab109ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab114">
           <Properties>
@@ -284,6 +317,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="114"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab114ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab113">
           <Properties>
@@ -292,6 +328,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="113"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab113ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab112">
           <Properties>
@@ -300,6 +339,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="112"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab112ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton16">
           <Properties>
@@ -404,14 +446,17 @@
                                   <Component id="jButtonHab126" min="-2" pref="95" max="-2" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                                  <Component id="NumHab" min="-2" pref="95" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="jButtonHab127" min="-2" pref="95" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButtonHab128" min="-2" pref="95" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="NumHab" max="32767" attributes="0"/>
-                                      <Component id="jButtonHab129" pref="95" max="32767" attributes="0"/>
-                                  </Group>
+                                  <Component id="jButtonHab129" min="-2" pref="95" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                           <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
@@ -476,8 +521,10 @@
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="jButtonHab127" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButtonHab128" min="-2" pref="60" max="-2" attributes="0"/>
-                              <Component id="jButtonHab129" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="jButtonHab128" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                                  <Component id="jButtonHab129" alignment="3" min="-2" pref="60" max="-2" attributes="0"/>
+                              </Group>
                           </Group>
                       </Group>
                       <Component id="jButton38" min="-2" pref="138" max="-2" attributes="0"/>
@@ -486,8 +533,9 @@
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButtonContinuar" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="NumHab" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <EmptySpace pref="37" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -505,6 +553,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="115"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab115ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab116">
           <Properties>
@@ -513,6 +564,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="116"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab116ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab117">
           <Properties>
@@ -521,6 +575,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="117"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab117ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab118">
           <Properties>
@@ -529,6 +586,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="118"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab118ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab119">
           <Properties>
@@ -537,6 +597,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="119"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab119ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab120">
           <Properties>
@@ -545,6 +608,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="120"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab120ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab121">
           <Properties>
@@ -564,6 +630,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="122"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab122ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab123">
           <Properties>
@@ -572,6 +641,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="123"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab123ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab124">
           <Properties>
@@ -580,6 +652,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="124"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab124ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab125">
           <Properties>
@@ -588,6 +663,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="125"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab125ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab126">
           <Properties>
@@ -596,6 +674,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="126"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab126ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab127">
           <Properties>
@@ -604,6 +685,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="127"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab127ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab128">
           <Properties>
@@ -612,6 +696,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="128"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab128ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButtonHab129">
           <Properties>
@@ -620,6 +707,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="129"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonHab129ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton37">
           <Properties>
@@ -654,6 +744,11 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="9"/>
           </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Numero de la habitacion:"/>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>

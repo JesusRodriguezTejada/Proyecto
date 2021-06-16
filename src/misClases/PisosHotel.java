@@ -7,6 +7,7 @@ package misClases;
 
 import controlMySql.MySqlConn;
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import misClases.Hotel;
 import test.test;
 /**
@@ -15,7 +16,8 @@ import test.test;
  */
 public class PisosHotel extends javax.swing.JFrame {
     MySqlConn objConn=new MySqlConn();
-    private  String numHab;
+    
+    public static String numHab="";
     /**
      * Creates new form PisosHotel
      */
@@ -81,6 +83,7 @@ public class PisosHotel extends javax.swing.JFrame {
         jButton39 = new javax.swing.JButton();
         jButtonContinuar = new javax.swing.JButton();
         NumHab = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -88,9 +91,19 @@ public class PisosHotel extends javax.swing.JFrame {
 
         jButtonHab102.setBackground(new java.awt.Color(213, 131, 44));
         jButtonHab102.setText("102");
+        jButtonHab102.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab102ActionPerformed(evt);
+            }
+        });
 
         jButtonHab101.setBackground(new java.awt.Color(213, 131, 44));
         jButtonHab101.setText("101");
+        jButtonHab101.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab101ActionPerformed(evt);
+            }
+        });
 
         jButtonHab100.setBackground(new java.awt.Color(213, 131, 44));
         jButtonHab100.setText("100");
@@ -102,39 +115,99 @@ public class PisosHotel extends javax.swing.JFrame {
 
         jButtonHab105.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab105.setText("105");
+        jButtonHab105.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab105ActionPerformed(evt);
+            }
+        });
 
         jButtonHab104.setBackground(new java.awt.Color(213, 131, 44));
         jButtonHab104.setText("104");
+        jButtonHab104.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab104ActionPerformed(evt);
+            }
+        });
 
         jButtonHab103.setBackground(new java.awt.Color(213, 131, 44));
         jButtonHab103.setText("103");
+        jButtonHab103.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab103ActionPerformed(evt);
+            }
+        });
 
         jButtonHab108.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab108.setText("108");
+        jButtonHab108.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab108ActionPerformed(evt);
+            }
+        });
 
         jButtonHab107.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab107.setText("107");
+        jButtonHab107.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab107ActionPerformed(evt);
+            }
+        });
 
         jButtonHab106.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab106.setText("106");
+        jButtonHab106.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab106ActionPerformed(evt);
+            }
+        });
 
         jButtonHab111.setBackground(new java.awt.Color(243, 181, 108));
         jButtonHab111.setText("111");
+        jButtonHab111.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab111ActionPerformed(evt);
+            }
+        });
 
         jButtonHab110.setBackground(new java.awt.Color(243, 181, 108));
         jButtonHab110.setText("110");
+        jButtonHab110.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab110ActionPerformed(evt);
+            }
+        });
 
         jButtonHab109.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab109.setText("109");
+        jButtonHab109.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab109ActionPerformed(evt);
+            }
+        });
 
         jButtonHab114.setBackground(new java.awt.Color(213, 131, 44));
         jButtonHab114.setText("114");
+        jButtonHab114.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab114ActionPerformed(evt);
+            }
+        });
 
         jButtonHab113.setBackground(new java.awt.Color(213, 131, 44));
         jButtonHab113.setText("113");
+        jButtonHab113.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab113ActionPerformed(evt);
+            }
+        });
 
         jButtonHab112.setBackground(new java.awt.Color(243, 181, 108));
         jButtonHab112.setText("112");
+        jButtonHab112.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab112ActionPerformed(evt);
+            }
+        });
 
         jButton16.setText("Alberca con vista al mar");
 
@@ -260,21 +333,51 @@ public class PisosHotel extends javax.swing.JFrame {
 
         jButtonHab115.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab115.setText("115");
+        jButtonHab115.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab115ActionPerformed(evt);
+            }
+        });
 
         jButtonHab116.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab116.setText("116");
+        jButtonHab116.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab116ActionPerformed(evt);
+            }
+        });
 
         jButtonHab117.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab117.setText("117");
+        jButtonHab117.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab117ActionPerformed(evt);
+            }
+        });
 
         jButtonHab118.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab118.setText("118");
+        jButtonHab118.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab118ActionPerformed(evt);
+            }
+        });
 
         jButtonHab119.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab119.setText("119");
+        jButtonHab119.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab119ActionPerformed(evt);
+            }
+        });
 
         jButtonHab120.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab120.setText("120");
+        jButtonHab120.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab120ActionPerformed(evt);
+            }
+        });
 
         jButtonHab121.setBackground(new java.awt.Color(243, 181, 108));
         jButtonHab121.setText("121");
@@ -286,27 +389,67 @@ public class PisosHotel extends javax.swing.JFrame {
 
         jButtonHab122.setBackground(new java.awt.Color(243, 181, 108));
         jButtonHab122.setText("122");
+        jButtonHab122.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab122ActionPerformed(evt);
+            }
+        });
 
         jButtonHab123.setBackground(new java.awt.Color(243, 181, 108));
         jButtonHab123.setText("123");
+        jButtonHab123.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab123ActionPerformed(evt);
+            }
+        });
 
         jButtonHab124.setBackground(new java.awt.Color(243, 181, 108));
         jButtonHab124.setText("124");
+        jButtonHab124.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab124ActionPerformed(evt);
+            }
+        });
 
         jButtonHab125.setBackground(new java.awt.Color(243, 181, 108));
         jButtonHab125.setText("125");
+        jButtonHab125.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab125ActionPerformed(evt);
+            }
+        });
 
         jButtonHab126.setBackground(new java.awt.Color(243, 181, 108));
         jButtonHab126.setText("126");
+        jButtonHab126.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab126ActionPerformed(evt);
+            }
+        });
 
         jButtonHab127.setBackground(new java.awt.Color(245, 230, 104));
         jButtonHab127.setText("127");
+        jButtonHab127.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab127ActionPerformed(evt);
+            }
+        });
 
         jButtonHab128.setBackground(new java.awt.Color(213, 131, 44));
         jButtonHab128.setText("128");
+        jButtonHab128.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab128ActionPerformed(evt);
+            }
+        });
 
         jButtonHab129.setBackground(new java.awt.Color(213, 131, 44));
         jButtonHab129.setText("129");
+        jButtonHab129.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonHab129ActionPerformed(evt);
+            }
+        });
 
         jButton37.setText("Guarderia");
 
@@ -322,6 +465,8 @@ public class PisosHotel extends javax.swing.JFrame {
                 jButtonContinuarActionPerformed(evt);
             }
         });
+
+        jLabel1.setText("Numero de la habitacion:");
 
         javax.swing.GroupLayout jPanelPiso2Layout = new javax.swing.GroupLayout(jPanelPiso2);
         jPanelPiso2.setLayout(jPanelPiso2Layout);
@@ -365,13 +510,16 @@ public class PisosHotel extends javax.swing.JFrame {
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonHab126, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanelPiso2Layout.createSequentialGroup()
+                                .addGap(92, 92, 92)
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(NumHab, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelPiso2Layout.createSequentialGroup()
                                 .addComponent(jButtonHab127, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonHab128, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(NumHab)
-                                    .addComponent(jButtonHab129, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))))
+                                .addComponent(jButtonHab129, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(27, 27, 27)
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelPiso2Layout.createSequentialGroup()
@@ -419,14 +567,16 @@ public class PisosHotel extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jButtonHab127, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonHab128, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButtonHab129, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(jButtonHab128, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jButtonHab129, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
                 .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonContinuar)
-                    .addComponent(NumHab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(NumHab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -450,7 +600,15 @@ public class PisosHotel extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonHab121ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab121ActionPerformed
-        // TODO add your handling code here:
+if("Ocupado".equals(jButtonHab121.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab121.setBackground(Color.BLACK);
+           jButtonHab121.setForeground(Color.white);
+           jButtonHab121.setText("Ocupado");  
+           PisosHotel.numHab="121";
+           PisosHotel.NumHab.setText("121");
+        }         // TODO add your handling code here:
         
     }//GEN-LAST:event_jButtonHab121ActionPerformed
     public void EstaOcupada(){
@@ -459,8 +617,10 @@ public class PisosHotel extends javax.swing.JFrame {
        // aux= new Habitacion[30];
 
         int op=0 ;
+          //pruebas de ocupacion
           jButtonHab100.setBackground(Color.BLACK);
-          jButtonHab100.setText("ocupado");
+          jButtonHab100.setText("Ocupado");
+          jButtonHab100.setForeground(Color.white);
           //for(int i=0;.size>=i;i++){
         
           //}
@@ -468,7 +628,7 @@ public class PisosHotel extends javax.swing.JFrame {
             case 1:
                 jButtonHab100.setBackground(Color.BLACK);
                 jButtonHab100.setText("Ocupado"); 
-                
+                jButtonHab100.setForeground(Color.white);
                 break;
             case 2:
                 
@@ -498,19 +658,369 @@ public class PisosHotel extends javax.swing.JFrame {
     
     private void jButtonHab100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab100ActionPerformed
        // TODO add your handling code here:
+        if("Ocupado".equals(jButtonHab100.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
            jButtonHab100.setBackground(Color.BLACK);
+           jButtonHab100.setForeground(Color.white);
            jButtonHab100.setText("Ocupado");  
-           this.numHab="100";
+           PisosHotel.numHab="100";
            PisosHotel.NumHab.setText("100");
+        }
     }//GEN-LAST:event_jButtonHab100ActionPerformed
 
     private void jButtonContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonContinuarActionPerformed
         // TODO add your handling code here:
-       test a =new test();
-       a.chek();  
-       this.setVisible(false);
-        
+        numHab=NumHab.getText();
+        test a =new test();
+        a.chek();  
+        this.setVisible(false);     
     }//GEN-LAST:event_jButtonContinuarActionPerformed
+
+    private void jButtonHab101ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab101ActionPerformed
+        // TODO add your handling code here:
+       if("Ocupado".equals(jButtonHab101.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab101.setBackground(Color.BLACK);
+           jButtonHab101.setForeground(Color.white);
+           jButtonHab101.setText("Ocupado");  
+           PisosHotel.numHab="101";
+           PisosHotel.NumHab.setText("101");
+        }
+    }//GEN-LAST:event_jButtonHab101ActionPerformed
+
+    private void jButtonHab102ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab102ActionPerformed
+        // TODO add your handling code here:
+        if("Ocupado".equals(jButtonHab102.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab102.setBackground(Color.BLACK);
+           jButtonHab102.setForeground(Color.white);
+           jButtonHab102.setText("Ocupado");  
+           PisosHotel.numHab="102";
+           PisosHotel.NumHab.setText("102");
+        }
+    }//GEN-LAST:event_jButtonHab102ActionPerformed
+
+    private void jButtonHab103ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab103ActionPerformed
+        // TODO add your handling code here:
+        if("Ocupado".equals(jButtonHab103.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab103.setBackground(Color.BLACK);
+           jButtonHab103.setForeground(Color.white);
+           jButtonHab103.setText("Ocupado");  
+           PisosHotel.numHab="103";
+           PisosHotel.NumHab.setText("103");
+        }
+    }//GEN-LAST:event_jButtonHab103ActionPerformed
+
+    private void jButtonHab104ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab104ActionPerformed
+        if("Ocupado".equals(jButtonHab104.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab104.setBackground(Color.BLACK);
+           jButtonHab104.setForeground(Color.white);
+           jButtonHab104.setText("Ocupado");  
+           PisosHotel.numHab="104";
+           PisosHotel.NumHab.setText("104");
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab104ActionPerformed
+
+    private void jButtonHab105ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab105ActionPerformed
+        // TODO add your handling code here:
+                if("Ocupado".equals(jButtonHab105.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab105.setBackground(Color.BLACK);
+           jButtonHab105.setForeground(Color.white);
+           jButtonHab105.setText("Ocupado");  
+           PisosHotel.numHab="105";
+           PisosHotel.NumHab.setText("105");
+        }
+    }//GEN-LAST:event_jButtonHab105ActionPerformed
+
+    private void jButtonHab106ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab106ActionPerformed
+        // TODO add your handling code here:
+                if("Ocupado".equals(jButtonHab106.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab106.setBackground(Color.BLACK);
+           jButtonHab106.setForeground(Color.white);
+           jButtonHab106.setText("Ocupado");  
+           PisosHotel.numHab="106";
+           PisosHotel.NumHab.setText("106");
+        }
+    }//GEN-LAST:event_jButtonHab106ActionPerformed
+
+    private void jButtonHab107ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab107ActionPerformed
+        if("Ocupado".equals(jButtonHab107.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab107.setBackground(Color.BLACK);
+           jButtonHab107.setForeground(Color.white);
+           jButtonHab107.setText("Ocupado");  
+           PisosHotel.numHab="107";
+           PisosHotel.NumHab.setText("107");
+        }        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab107ActionPerformed
+
+    private void jButtonHab108ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab108ActionPerformed
+        if("Ocupado".equals(jButtonHab108.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab108.setBackground(Color.BLACK);
+           jButtonHab108.setForeground(Color.white);
+           jButtonHab108.setText("Ocupado");  
+           PisosHotel.numHab="108";
+           PisosHotel.NumHab.setText("108");
+        }      
+    }//GEN-LAST:event_jButtonHab108ActionPerformed
+
+    private void jButtonHab109ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab109ActionPerformed
+        if("Ocupado".equals(jButtonHab109.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab109.setBackground(Color.BLACK);
+           jButtonHab109.setForeground(Color.white);
+           jButtonHab109.setText("Ocupado");  
+           PisosHotel.numHab="109";
+           PisosHotel.NumHab.setText("109");
+        }        
+    }//GEN-LAST:event_jButtonHab109ActionPerformed
+
+    private void jButtonHab110ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab110ActionPerformed
+        // TODO add your handling code here:
+    if("Ocupado".equals(jButtonHab110.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab110.setBackground(Color.BLACK);
+           jButtonHab110.setForeground(Color.white);
+           jButtonHab110.setText("Ocupado");  
+           PisosHotel.numHab="110";
+           PisosHotel.NumHab.setText("110");
+        }  
+    }//GEN-LAST:event_jButtonHab110ActionPerformed
+
+    private void jButtonHab111ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab111ActionPerformed
+        // TODO add your handling code here:
+        if("Ocupado".equals(jButtonHab111.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab111.setBackground(Color.BLACK);
+           jButtonHab111.setForeground(Color.white);
+           jButtonHab111.setText("Ocupado");  
+           PisosHotel.numHab="111";
+           PisosHotel.NumHab.setText("111");
+        } 
+    }//GEN-LAST:event_jButtonHab111ActionPerformed
+
+    private void jButtonHab112ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab112ActionPerformed
+
+        if("Ocupado".equals(jButtonHab112.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab112.setBackground(Color.BLACK);
+           jButtonHab112.setForeground(Color.white);
+           jButtonHab112.setText("Ocupado");  
+           PisosHotel.numHab="112";
+           PisosHotel.NumHab.setText("112");
+        } // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab112ActionPerformed
+
+    private void jButtonHab113ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab113ActionPerformed
+if("Ocupado".equals(jButtonHab113.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab113.setBackground(Color.BLACK);
+           jButtonHab113.setForeground(Color.white);
+           jButtonHab113.setText("Ocupado");  
+           PisosHotel.numHab="113";
+           PisosHotel.NumHab.setText("113");
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab113ActionPerformed
+
+    private void jButtonHab114ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab114ActionPerformed
+if("Ocupado".equals(jButtonHab114.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab114.setBackground(Color.BLACK);
+           jButtonHab114.setForeground(Color.white);
+           jButtonHab114.setText("Ocupado");  
+           PisosHotel.numHab="114";
+           PisosHotel.NumHab.setText("114");
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab114ActionPerformed
+
+    private void jButtonHab115ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab115ActionPerformed
+if("Ocupado".equals(jButtonHab115.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab115.setBackground(Color.BLACK);
+           jButtonHab115.setForeground(Color.white);
+           jButtonHab115.setText("Ocupado");  
+           PisosHotel.numHab="115";
+           PisosHotel.NumHab.setText("115");
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab115ActionPerformed
+
+    private void jButtonHab116ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab116ActionPerformed
+if("Ocupado".equals(jButtonHab116.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab116.setBackground(Color.BLACK);
+           jButtonHab116.setForeground(Color.white);
+           jButtonHab116.setText("Ocupado");  
+           PisosHotel.numHab="116";
+           PisosHotel.NumHab.setText("116");
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab116ActionPerformed
+
+    private void jButtonHab117ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab117ActionPerformed
+if("Ocupado".equals(jButtonHab117.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab117.setBackground(Color.BLACK);
+           jButtonHab117.setForeground(Color.white);
+           jButtonHab117.setText("Ocupado");  
+           PisosHotel.numHab="117";
+           PisosHotel.NumHab.setText("117");
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab117ActionPerformed
+
+    private void jButtonHab118ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab118ActionPerformed
+if("Ocupado".equals(jButtonHab118.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab118.setBackground(Color.BLACK);
+           jButtonHab118.setForeground(Color.white);
+           jButtonHab118.setText("Ocupado");  
+           PisosHotel.numHab="118";
+           PisosHotel.NumHab.setText("118");
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab118ActionPerformed
+
+    private void jButtonHab119ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab119ActionPerformed
+if("Ocupado".equals(jButtonHab119.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab119.setBackground(Color.BLACK);
+           jButtonHab119.setForeground(Color.white);
+           jButtonHab119.setText("Ocupado");  
+           PisosHotel.numHab="119";
+           PisosHotel.NumHab.setText("119");
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab119ActionPerformed
+
+    private void jButtonHab120ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab120ActionPerformed
+if("Ocupado".equals(jButtonHab120.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab120.setBackground(Color.BLACK);
+           jButtonHab120.setForeground(Color.white);
+           jButtonHab120.setText("Ocupado");  
+           PisosHotel.numHab="120";
+           PisosHotel.NumHab.setText("120");
+        }         // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab120ActionPerformed
+
+    private void jButtonHab122ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab122ActionPerformed
+        // TODO add your handling code here:
+        if("Ocupado".equals(jButtonHab122.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab122.setBackground(Color.BLACK);
+           jButtonHab122.setForeground(Color.white);
+           jButtonHab122.setText("Ocupado");  
+           PisosHotel.numHab="122";
+           PisosHotel.NumHab.setText("122");
+        }   
+    }//GEN-LAST:event_jButtonHab122ActionPerformed
+
+    private void jButtonHab123ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab123ActionPerformed
+if("Ocupado".equals(jButtonHab123.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab123.setBackground(Color.BLACK);
+           jButtonHab123.setForeground(Color.white);
+           jButtonHab123.setText("Ocupado");  
+           PisosHotel.numHab="123";
+           PisosHotel.NumHab.setText("123");
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab123ActionPerformed
+
+    private void jButtonHab124ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab124ActionPerformed
+if("Ocupado".equals(jButtonHab124.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab124.setBackground(Color.BLACK);
+           jButtonHab124.setForeground(Color.white);
+           jButtonHab124.setText("Ocupado");  
+           PisosHotel.numHab="124";
+           PisosHotel.NumHab.setText("124");
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab124ActionPerformed
+
+    private void jButtonHab125ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab125ActionPerformed
+if("Ocupado".equals(jButtonHab125.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab125.setBackground(Color.BLACK);
+           jButtonHab125.setForeground(Color.white);
+           jButtonHab125.setText("Ocupado");  
+           PisosHotel.numHab="125";
+           PisosHotel.NumHab.setText("125");
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab125ActionPerformed
+
+    private void jButtonHab126ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab126ActionPerformed
+if("Ocupado".equals(jButtonHab126.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab126.setBackground(Color.BLACK);
+           jButtonHab126.setForeground(Color.white);
+           jButtonHab126.setText("Ocupado");  
+           PisosHotel.numHab="126";
+           PisosHotel.NumHab.setText("126");
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab126ActionPerformed
+
+    private void jButtonHab127ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab127ActionPerformed
+if("Ocupado".equals(jButtonHab127.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab127.setBackground(Color.BLACK);
+           jButtonHab127.setForeground(Color.white);
+           jButtonHab127.setText("Ocupado");  
+           PisosHotel.numHab="127";
+           PisosHotel.NumHab.setText("127");
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab127ActionPerformed
+
+    private void jButtonHab128ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab128ActionPerformed
+if("Ocupado".equals(jButtonHab128.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab128.setBackground(Color.BLACK);
+           jButtonHab128.setForeground(Color.white);
+           jButtonHab128.setText("Ocupado");  
+           PisosHotel.numHab="128";
+           PisosHotel.NumHab.setText("128");
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab128ActionPerformed
+
+    private void jButtonHab129ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab129ActionPerformed
+if("Ocupado".equals(jButtonHab129.getText())){
+           JOptionPane.showMessageDialog(null,"habitacion no disponible");
+        }else{
+           jButtonHab129.setBackground(Color.BLACK);
+           jButtonHab129.setForeground(Color.white);
+           jButtonHab129.setText("Ocupado");  
+           PisosHotel.numHab="129";
+           PisosHotel.NumHab.setText("129");
+        }           // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonHab129ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -593,6 +1103,7 @@ public class PisosHotel extends javax.swing.JFrame {
     private javax.swing.JButton jButtonHab127;
     private javax.swing.JButton jButtonHab128;
     private javax.swing.JButton jButtonHab129;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanelPiso2;
     private javax.swing.JPanel jPanelPisoUno;

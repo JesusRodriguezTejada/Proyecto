@@ -12,10 +12,12 @@ public class Checkin extends javax.swing.JFrame {
         this.conn = conn;
         initComponents();
         PisosHotel a = new PisosHotel();
+        jTextFieldNumero.setText(a.numHab);
     }
 
     public Checkin() {
         initComponents();
+        
     }
 
 
@@ -45,7 +47,7 @@ public class Checkin extends javax.swing.JFrame {
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jButtonBuscar = new javax.swing.JButton();
-        jTextFieldNumHab = new javax.swing.JTextField();
+        jTextFieldNumero = new javax.swing.JTextField();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -116,7 +118,7 @@ public class Checkin extends javax.swing.JFrame {
                                 .addGroup(jPanel1Layout.createSequentialGroup()
                                     .addComponent(jButtonBuscar)
                                     .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                    .addComponent(jTextFieldNumHab, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jTextFieldNumero, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                             .addComponent(jLabel5)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -162,7 +164,7 @@ public class Checkin extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(jButtonBuscar)
-                    .addComponent(jTextFieldNumHab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldNumero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
@@ -222,7 +224,7 @@ public class Checkin extends javax.swing.JFrame {
         Ciudad=this.jTextFieldCiudad.getText();
         numPer=this.jTextFieldTotalPersonas.getText().trim();
         dias=this.jTextFieldDias.getText().trim();
-        numHab=this.jTextFieldNumHab.getText().trim();
+        numHab=this.jTextFieldNumero.getText().trim();
         Piso=this.jTextFieldPiso.getText().trim();
         
         String parte1 = "Insert into huespedes (Nombre, habitacion, Ciudad,Personas, Dias,NumHab,Piso) VALUES (";
@@ -236,12 +238,12 @@ public class Checkin extends javax.swing.JFrame {
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
         // TODO add your handling code here:
         String aux;
-        
         PisosHotel a = new PisosHotel();
         a.setVisible(true);
-        aux=a.getNumHab();
-        System.out.println(aux);
-        jTextFieldNumHab.setText(NumHab.setText());
+        //aux=a.getNumHab();
+        System.out.println(a.getNumHab());
+        
+        jTextFieldNumero.setText(PisosHotel.numHab);
         this.setVisible(false);
         
         
@@ -302,7 +304,7 @@ public class Checkin extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldDias;
     private javax.swing.JTextField jTextFieldHab;
     private javax.swing.JTextField jTextFieldNombre;
-    public static javax.swing.JTextField jTextFieldNumHab;
+    public static javax.swing.JTextField jTextFieldNumero;
     private javax.swing.JTextField jTextFieldPiso;
     private javax.swing.JTextField jTextFieldTotalPersonas;
     // End of variables declaration//GEN-END:variables
