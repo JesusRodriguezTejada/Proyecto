@@ -102,8 +102,8 @@ public class ConsultaCostos extends javax.swing.JFrame {
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 635, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRadioButtonSencilla, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jRadioButtonTriple, javax.swing.GroupLayout.PREFERRED_SIZE, 241, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabelMostrarPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 470, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(157, Short.MAX_VALUE))
+                    .addComponent(jLabelMostrarPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 643, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(149, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,13 +137,13 @@ public class ConsultaCostos extends javax.swing.JFrame {
         // TODO add your handling code here:
         String mensaje= "El Precio de esta habitacion es:";
         if (jRadioButtonSencilla.isSelected()){
-            mensaje += "$123";
+            mensaje += "$1060";
         }
         if(jRadioButtonDoble.isSelected()){
-            mensaje += "$456";
+            mensaje += "$1500";
         }
         if (jRadioButtonTriple.isSelected()){
-            mensaje += "$789";
+            mensaje += "$2050";
         }
         jLabelMostrarPrecio.setText(mensaje);
     }//GEN-LAST:event_jButtonMostrarPrecioActionPerformed
