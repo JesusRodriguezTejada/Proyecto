@@ -1,24 +1,41 @@
 
 package misClases;
 
+import com.itextpdf.text.Chunk;
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
+import com.itextpdf.text.Element;
 import com.itextpdf.text.Paragraph;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import controlMySql.MySqlConn;
 import java.io.FileOutputStream;
 import java.sql.Connection;
+//import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Image;
+import com.itextpdf.text.Paragraph;
+import com.itextpdf.text.FontFactory;
+import com.itextpdf.text.BaseColor;
+import com.itextpdf.text.Font;
+
+
 
 public class PDF extends javax.swing.JFrame {
 
     
     public PDF() {
         initComponents();
+        
+        
+        
     }
 
     /**
@@ -76,9 +93,18 @@ public class PDF extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         Document documento = new Document();
+        
         try {
             String ruta = System.getProperty("user.home");
             PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Escritorio/Reporte_Alumnos.pdf"));
+            
+            Image header = Image.getInstance("src/misimagenes/firma.jpg");
+            header.scaleToFit(100, 100);
+            header.setAlignment(Chunk.ALIGN_CENTER);
+            Image header2 = Image.getInstance("src/misimagenes/hotelsunset2.png");
+            header2.scaleToFit(200, 200);
+            header2.setAlignment(Chunk.ALIGN_CENTER);
+            
             documento.open();
             PdfPTable tabla = new PdfPTable(7);
             tabla.addCell("Nombre");
@@ -95,25 +121,53 @@ public class PDF extends javax.swing.JFrame {
                 Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/hotel", "root", "");
                 PreparedStatement pst = cn.prepareStatement("select * from huespedes");
                 
+                Paragraph titulo = new Paragraph("Hotel Sunset Akumal");
+                titulo.setAlignment(1);
+                Paragraph lema = new Paragraph("Somos un hotel 4 estrellas dispuesto a brindale la mejor experiencia, "
+                        + "situado sobre una playa de arena blanca, el hotel sunset akumal es el "
+                        + "lugar ideal para vivir unas vacaciones inolvidables");
+                lema.setAlignment(Element.ALIGN_JUSTIFIED);
                 ResultSet rs = pst.executeQuery();
+                Paragraph firma = new Paragraph("Nombre y firma del gerente ");
+                firma.setAlignment(1);
+                Paragraph firma2 = new Paragraph("Alondra de Jesús Firova Ratero");
+                firma2.setAlignment(1);
+                Date date = new Date();
+                DateFormat dateformat = new SimpleDateFormat("dd/MM/yyyy");
                 
-                documento.add(new Paragraph("Hotel Sunset Akumal"));
-                documento.add(new Paragraph("Somos un hotel 4 estrellas dispuesto a brindale la mejor experiencia,"));
-                documento.add(new Paragraph("situado sobre una playa de arena blanca, el hotel sunset akumal es el"));
-                documento.add(new Paragraph("lugar ideal para vivir unas vacaciones inolvidables"));
+                documento.add(header2);
+                documento.add(Chunk.NEWLINE);
+                documento.add(Chunk.NEWLINE);
+                documento.add(titulo);
+                documento.add(Chunk.NEWLINE);
+                documento.add(lema);
+                documento.add(Chunk.NEWLINE);
                 documento.add(new Paragraph("Ubicacion: Carretera Fed Chetumal-Puerto Juárez KM 252, 77780 Akumal, Q.R"));
-                documento.add(new Paragraph("Nombre del huesped: " + rs.getString(1)));
-                documento.add(new Paragraph("Ciudad de origen: " + rs.getString(3)));
-                documento.add(new Paragraph("Fecha de ingreso: " ));
-                documento.add(new Paragraph("Fecha de salida: " ));
-                documento.add(new Paragraph("Tipo de habitacion: " + rs.getString(2)));
+                documento.add(Chunk.NEWLINE);
+                documento.add(new Paragraph("Fecha: " + dateformat.format(date)));
+                documento.add(Chunk.NEWLINE);
+                if (rs.next()){
+                    documento.add(new Paragraph("Nombre del huesped: " + rs.getString(1)));
+                    documento.add(new Paragraph("Ciudad de origen: " + rs.getString(3)));
+                    documento.add(new Paragraph("Fecha de ingreso: " ));
+                    documento.add(new Paragraph("Fecha de salida: " ));
+                    documento.add(new Paragraph("Tipo de habitacion: " + rs.getString(2)));
+                }
+                
                 documento.add(new Paragraph("Costo de habitacion: " ));
                 documento.add(new Paragraph("Dias en el hotel: " + rs.getString(5)));
                 documento.add(new Paragraph("Total a pagar sin cargos extras: " ));
                 documento.add(new Paragraph("Total a pagar con cargos extras: " ));
                 documento.add(new Paragraph("Lista de cargos extras: " ));
-                documento.add(new Paragraph("Nombre y firma del gerente: " ));
+                documento.add(Chunk.NEWLINE);
+                documento.add(new Paragraph(firma));
+                documento.add(Chunk.NEWLINE);
+                documento.add(new Paragraph(firma2));
+                documento.add(header);
+                documento.add(Chunk.NEWLINE);
                 documento.add(new Paragraph("Ya no vengan ¬¬ !!! "));
+                documento.add(Chunk.NEWLINE);
+                documento.add(Chunk.NEWLINE);
                 documento.add(new Paragraph("Salida completada "));
                         
                 /*if (rs.next()) {
