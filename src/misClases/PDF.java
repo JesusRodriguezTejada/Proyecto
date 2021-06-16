@@ -96,7 +96,7 @@ public class PDF extends javax.swing.JFrame {
         
         try {
             String ruta = System.getProperty("user.home");
-            PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Escritorio/Reporte_Alumnos.pdf"));
+            PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Desktop/Reporte_Alumnos.pdf"));
             
             Image header = Image.getInstance("src/misimagenes/firma.jpg");
             header.scaleToFit(100, 100);

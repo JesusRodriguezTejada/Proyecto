@@ -5,21 +5,28 @@
  */
 package misClases;
 
+import controlMySql.MySqlConn;
 import java.awt.Color;
 import misClases.Hotel;
+import test.test;
 /**
  *
  * @author Alondra paulina v
  */
 public class PisosHotel extends javax.swing.JFrame {
-
+    MySqlConn objConn=new MySqlConn();
+    private  String numHab;
     /**
      * Creates new form PisosHotel
      */
     public PisosHotel() {
+
         initComponents();
-         EstaOcupada();
+        EstaOcupada();
+        
     }
+    
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -72,7 +79,8 @@ public class PisosHotel extends javax.swing.JFrame {
         jButton37 = new javax.swing.JButton();
         jButton38 = new javax.swing.JButton();
         jButton39 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jButtonContinuar = new javax.swing.JButton();
+        NumHab = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -306,9 +314,14 @@ public class PisosHotel extends javax.swing.JFrame {
 
         jButton39.setText("Area de video Juegos");
 
-        jButton1.setBackground(new java.awt.Color(51, 51, 51));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Continuar");
+        jButtonContinuar.setBackground(new java.awt.Color(51, 51, 51));
+        jButtonContinuar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonContinuar.setText("Continuar");
+        jButtonContinuar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonContinuarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanelPiso2Layout = new javax.swing.GroupLayout(jPanelPiso2);
         jPanelPiso2.setLayout(jPanelPiso2Layout);
@@ -346,24 +359,26 @@ public class PisosHotel extends javax.swing.JFrame {
                     .addGroup(jPanelPiso2Layout.createSequentialGroup()
                         .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelPiso2Layout.createSequentialGroup()
-                                .addComponent(jButtonHab127, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonHab128, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jButtonHab129, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanelPiso2Layout.createSequentialGroup()
                                 .addComponent(jButtonHab124, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
                                 .addComponent(jButtonHab125, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButtonHab126, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jButtonHab126, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanelPiso2Layout.createSequentialGroup()
+                                .addComponent(jButtonHab127, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButtonHab128, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(NumHab)
+                                    .addComponent(jButtonHab129, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE))))
                         .addGap(27, 27, 27)
-                        .addComponent(jButton38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanelPiso2Layout.createSequentialGroup()
+                                .addComponent(jButtonContinuar)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(jButton38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                 .addContainerGap())
-            .addGroup(jPanelPiso2Layout.createSequentialGroup()
-                .addGap(243, 243, 243)
-                .addComponent(jButton1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanelPiso2Layout.setVerticalGroup(
             jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -408,7 +423,9 @@ public class PisosHotel extends javax.swing.JFrame {
                             .addComponent(jButtonHab129, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jButton38, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(31, 31, 31)
-                .addComponent(jButton1)
+                .addGroup(jPanelPiso2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonContinuar)
+                    .addComponent(NumHab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -434,6 +451,7 @@ public class PisosHotel extends javax.swing.JFrame {
 
     private void jButtonHab121ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab121ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButtonHab121ActionPerformed
     public void EstaOcupada(){
         Habitacion[] aux;
@@ -465,12 +483,34 @@ public class PisosHotel extends javax.swing.JFrame {
                 
         }
     }
+
+    public String getNumHab() {
+        return numHab;
+    }
+
+    public void setNumHab(String numHab) {
+        this.numHab = numHab;
+    }
+    
+    public void llenar(){
+    
+        }
     
     private void jButtonHab100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHab100ActionPerformed
        // TODO add your handling code here:
            jButtonHab100.setBackground(Color.BLACK);
-           jButtonHab100.setText("Ocupado");   
+           jButtonHab100.setText("Ocupado");  
+           this.numHab="100";
+           PisosHotel.NumHab.setText("100");
     }//GEN-LAST:event_jButtonHab100ActionPerformed
+
+    private void jButtonContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonContinuarActionPerformed
+        // TODO add your handling code here:
+       test a =new test();
+       a.chek();  
+       this.setVisible(false);
+        
+    }//GEN-LAST:event_jButtonContinuarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -512,7 +552,7 @@ public class PisosHotel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public static javax.swing.JTextField NumHab;
     private javax.swing.JButton jButton16;
     private javax.swing.JButton jButton17;
     private javax.swing.JButton jButton18;
@@ -522,6 +562,7 @@ public class PisosHotel extends javax.swing.JFrame {
     private javax.swing.JButton jButton37;
     private javax.swing.JButton jButton38;
     private javax.swing.JButton jButton39;
+    private javax.swing.JButton jButtonContinuar;
     private javax.swing.JButton jButtonHab100;
     private javax.swing.JButton jButtonHab101;
     private javax.swing.JButton jButtonHab102;
