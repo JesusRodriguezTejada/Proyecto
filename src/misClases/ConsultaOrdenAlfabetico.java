@@ -137,8 +137,8 @@ MySqlConn conn;
             Object datos [][] = new Object [n][2];
             for (int i =0; i<n; i++){
                 try{
-                    datos[i][0] = this.conn.rs.getInt(1);
-                    datos[i][1] = this.conn.rs.getString(2);
+                    datos[i][0] = this.conn.rs.getInt(1);//cambiar a numero de hanitacion
+                    datos[i][1] = this.conn.rs.getString(2);//el nombre
                     //datos[i][2] = this.conn.rs.getString(3);
                    // datos[i][3] = this.conn.rs.getString(4);
                     this.conn.rs.next();
@@ -151,10 +151,10 @@ MySqlConn conn;
             jTableConsulta.setModel(new DefaultTableModel(datos,columnas));
             System.out.println("tabla lista");
         }//fin del if
-        else
+        else{
             JOptionPane.showMessageDialog(this, "Esta persona no esta registrada");
     }//GEN-LAST:event_jButtonBuscarActionPerformed
-
+    }
     /**
      * @param args the command line arguments
      */

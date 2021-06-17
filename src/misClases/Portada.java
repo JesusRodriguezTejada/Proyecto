@@ -64,7 +64,7 @@ public class Portada extends javax.swing.JFrame {
         setExtendedState(6);
 
         jLabel1.setFont(new java.awt.Font("Source Sans Pro Black", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Universidad Autonoma de Aguascalientes ");
 
@@ -72,40 +72,41 @@ public class Portada extends javax.swing.JFrame {
         jLabelLogoUniversidad.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel3.setFont(new java.awt.Font("Source Sans Pro Black", 1, 20)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText(" Programacion lll");
 
         jLabel10.setFont(new java.awt.Font("Source Sans Pro Black", 1, 18)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Profesora:");
 
         jLabel4.setFont(new java.awt.Font("Source Sans Pro Black", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Georgina Salazar Partida");
 
         jLabel6.setFont(new java.awt.Font("Source Sans Pro Black", 1, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel6.setText("Programadores:");
 
         jLabel5.setFont(new java.awt.Font("Source Sans Pro Black", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Jesus Gilberto Figueroa Ramirez");
 
         jLabel7.setFont(new java.awt.Font("Source Sans Pro Black", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Jesus Rodrguez Tejada");
 
         jLabel8.setFont(new java.awt.Font("Source Sans Pro Black", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Alondra Paulina Vazquez Rodriguez ");
 
         jLabel2.setFont(new java.awt.Font("Source Sans Pro Black", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Fecha :  18/06/2021");
 
         jButtonSiguiente.setBackground(new java.awt.Color(0, 96, 130));
+        jButtonSiguiente.setForeground(new java.awt.Color(255, 255, 255));
         jButtonSiguiente.setText("Iniciar sesion");
         jButtonSiguiente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -239,7 +240,7 @@ public class Portada extends javax.swing.JFrame {
      private Image background;
      
      public void paint (Graphics g){
-     background = new ImageIcon(getClass().getResource("/misimagenes/imagen de portada.jpg")).getImage(); 
+     background = new ImageIcon(getClass().getResource("/misimagenes/wallpaper.png")).getImage(); 
      g.drawImage(background, 0, 0, getWidth(), getHeight(), this);
      setOpaque(false);
      super.paint(g);
