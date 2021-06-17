@@ -15,7 +15,7 @@ public class test {
        //new checkout(objConn).setVisible(true);
        //new ConsultaPorNombre(objConn).setVisible(true);
     }
-    public void chek(){
+    public void chekin(){
         new Checkin(objConn).setVisible(true);
     }
     public static void main(String[] args) {
