@@ -136,7 +136,7 @@ MySqlConn conn;
                     System.out.println("Error2" + e.getMessage());
         }
             }
-               String columnas [] = { "Nombre", "NumHab", "Piso"};
+               String columnas [] = { "NumHab", "Nombre", "Piso"};
             jTableConsulta2.setModel(new DefaultTableModel(datos,columnas));
             System.out.println("tabla lista");
         
