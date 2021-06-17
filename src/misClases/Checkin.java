@@ -21,7 +21,9 @@ public class Checkin extends javax.swing.JFrame {
         
     }
     
+    
     public Checkin() {
+        
         initComponents();  
     }
     
@@ -43,9 +45,7 @@ public class Checkin extends javax.swing.JFrame {
 
         String[] f = fecha.split("/");
         Calendar calendar = Calendar.getInstance();
-
         calendar.set(Integer.parseInt(f[0]), Integer.parseInt(f[1]) - 1, Integer.parseInt(f[2]));
-
         calendar.add(Calendar.DAY_OF_MONTH, dias);
         SimpleDateFormat fe = new SimpleDateFormat("dd/MM/YYYY");
         return fe.format(calendar.getTime());
