@@ -2,6 +2,11 @@
 package misClases;
 
 import controlMySql.MySqlConn;
+import java.sql.DriverManager;
+import java.sql.Statement;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import javax.swing.JOptionPane;
 
 
 public class Checkin extends javax.swing.JFrame {
@@ -13,6 +18,7 @@ public class Checkin extends javax.swing.JFrame {
         initComponents();
         PisosHotel a = new PisosHotel();
         jTextFieldNumero.setText(a.numHab);
+        
     }
 
     public Checkin() {
@@ -44,9 +50,9 @@ public class Checkin extends javax.swing.JFrame {
         jButtonRegistro = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jTextFieldPiso = new javax.swing.JTextField();
-        jDateChooser3 = new com.toedter.calendar.JDateChooser();
         jButtonBuscar = new javax.swing.JButton();
         jTextFieldNumero = new javax.swing.JTextField();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -93,7 +99,7 @@ public class Checkin extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(0, 170, Short.MAX_VALUE)
+                .addGap(0, 183, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel5)
@@ -126,9 +132,9 @@ public class Checkin extends javax.swing.JFrame {
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                 .addGap(6, 6, 6)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jDateChooser3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextFieldTotalPersonas, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextFieldDias))
+                                    .addComponent(jTextFieldTotalPersonas, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                    .addComponent(jTextFieldDias)
+                                    .addComponent(jDateChooser1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,10 +179,9 @@ public class Checkin extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
                     .addComponent(jTextFieldTotalPersonas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(8, 8, 8)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(2, 2, 2)
+                        .addGap(10, 10, 10)
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel6)
@@ -192,7 +197,8 @@ public class Checkin extends javax.swing.JFrame {
                                 .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 20, Short.MAX_VALUE)
                                 .addGap(104, 104, 104))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jDateChooser3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addComponent(jDateChooser1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldDias, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
@@ -218,22 +224,44 @@ public class Checkin extends javax.swing.JFrame {
 
     private void jButtonRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistroActionPerformed
         // TODO add your handling code here:
-        String nombre,habitacion,Ciudad, numPer, dias, numHab,Piso;
+        SimpleDateFormat dFormat = new SimpleDateFormat("dd-MM-yyyy");
+        //String fechaIngre = dFormat.format(jDateChooser1.getDate());
         
-        nombre =this.jTextFieldNombre.getText();
-        habitacion=this.jTextFieldHab.getText();
-        Ciudad=this.jTextFieldCiudad.getText();
-        numPer=this.jTextFieldTotalPersonas.getText().trim();
-        dias=this.jTextFieldDias.getText().trim();
-        numHab=this.jTextFieldNumero.getText().trim();
-        Piso=this.jTextFieldPiso.getText().trim();
         
-        String parte1 = "Insert into huespedes (Nombre, habitacion, Ciudad,Personas, Dias,NumHab,Piso) VALUES (";
-        String parte2 = "'"+nombre+"','"+habitacion+"','"+Ciudad+"','"+numPer+"','"+dias +"','"+ numHab+"','"+Piso+"')";
-        String query = parte1 + parte2;
+        String nombre,habitacion,Ciudad, numPer, dias, numHab,Piso,fechaIngre;
         
-        int j=this.conn.Update(query);
-       System.out.println("Numero de registros afectados por laccion:"+j);
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            java.sql.Connection conexion = DriverManager.getConnection("jdbc:mysql://localhost/hotel", "root", "");
+            JOptionPane.showMessageDialog(null, "Conectado a la base de datos");
+            
+            nombre =this.jTextFieldNombre.getText();
+            Ciudad=this.jTextFieldCiudad.getText();
+            habitacion=this.jTextFieldHab.getText();
+            numHab=this.jTextFieldNumero.getText().trim();
+            numPer=this.jTextFieldTotalPersonas.getText().trim();
+            fechaIngre = dFormat.format(jDateChooser1.getDate());
+            dias=this.jTextFieldDias.getText().trim();
+            Piso=this.jTextFieldPiso.getText().trim();
+
+
+            //String parte1 = "Insert into huespedes (Nombre, Ciudad, tipohabitacion, NumHab, Personas, fechaingreso, Dias, Piso) VALUES (";
+            //String parte2 = "'"+nombre+"','"+Ciudad+"','"+habitacion+"','"+ numHab+"','"+numPer+"','"+fechaIngre +"','"+dias +"','"+Piso+"')";
+            //String query = parte1 + parte2;
+
+            String query ="INSERT INTO huespedes (NumHab, Nombre, FechaEntrada, FechaSalida, TipoHabitacion, Piso, Personas, PersonasExtras, Ciudad, Dias) VALUES ('"+numHab+"','"+nombre+"','"+fechaIngre+"','"+habitacion+"','"+Piso+"','"+numPer+"','"+Ciudad+"','"+dias+"')";
+
+            Statement stmt = conexion.createStatement();
+            stmt.executeUpdate(query);
+            
+        } catch (Exception e) {
+            System.out.println("Error");
+            e.printStackTrace();
+        }
+        
+        
+        //int j=this.conn.Update(query);
+       //System.out.println("Numero de registros afectados por laccion:"+j);
     }//GEN-LAST:event_jButtonRegistroActionPerformed
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
@@ -287,7 +315,7 @@ public class Checkin extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public static javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonRegistro;
-    private com.toedter.calendar.JDateChooser jDateChooser3;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

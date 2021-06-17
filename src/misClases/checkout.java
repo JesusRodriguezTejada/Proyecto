@@ -5,9 +5,20 @@
  */
 package misClases;
 
+import com.itextpdf.text.Chunk;
+import com.itextpdf.text.Element;
+import com.itextpdf.text.Paragraph;
 import controlMySql.MySqlConn;
 import java.awt.event.KeyEvent;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -66,10 +77,8 @@ public class checkout extends javax.swing.JFrame {
             }
         });
 
-        jTextFieldNombre.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNombre.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(255, 102, 0)));
 
-        jTextFieldHabitacion.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldHabitacion.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 3, 0, new java.awt.Color(255, 102, 0)));
         jTextFieldHabitacion.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
@@ -123,6 +132,12 @@ public class checkout extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jRadioButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -130,18 +145,12 @@ public class checkout extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jButtonBaja)
                                 .addGap(18, 18, 18)
-                                .addComponent(jButton1)))
-                        .addContainerGap(62, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jButton1))
                             .addComponent(jLabel2)
-                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 172, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextFieldHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(jTextFieldHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(62, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jButtonMenuPrincipal)
@@ -160,7 +169,7 @@ public class checkout extends javax.swing.JFrame {
                 .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(16, 16, 16)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,7 +181,7 @@ public class checkout extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonBaja)
                     .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 22, Short.MAX_VALUE)
                 .addComponent(jButtonMenuPrincipal))
         );
 
@@ -190,22 +199,16 @@ public class checkout extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBajaActionPerformed
+    private void jButtonMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenuPrincipalActionPerformed
         // TODO add your handling code here:
-        System.out.println("entre");
-        String NumHab = this.jTextFieldHabitacion.getText().trim();
-        if (NumHab.isEmpty()){
-         JOptionPane.showMessageDialog(this, "nERO DE HABITACION VACIO");
-        }
-        else {
-            String query = "delete from huespedes where NumHab = "+"'"+NumHab+"'";
-            int j = this.conn.Update(query);
-            if (j>0)
-                JOptionPane.showMessageDialog(this, "baja realizada");
-            else
-                JOptionPane.showMessageDialog(this, "lA BAJA NO SE REALIZO");
-        }
-    }//GEN-LAST:event_jButtonBajaActionPerformed
+        MenuPrincipal Regresar = new MenuPrincipal();
+        Regresar.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonMenuPrincipalActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jTextFieldHabitacionKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldHabitacionKeyReleased
         // TODO add your handling code here:
@@ -221,21 +224,49 @@ public class checkout extends javax.swing.JFrame {
                 this.jTextFieldNombre.setText(Nombre);
                 System.out.println(Nombre);
             }catch(SQLException ex){
-                System.out.println("No existe la habitacion"); 
+                System.out.println("No existe la habitacion");
             }
         }
     }//GEN-LAST:event_jTextFieldHabitacionKeyReleased
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jButtonBajaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBajaActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
-
-    private void jButtonMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenuPrincipalActionPerformed
-        // TODO add your handling code here:
-        MenuPrincipal Regresar = new MenuPrincipal();
-        Regresar.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButtonMenuPrincipalActionPerformed
+        System.out.println("entre");
+        String NumHab = this.jTextFieldHabitacion.getText().trim();
+        if (NumHab.isEmpty()){
+            JOptionPane.showMessageDialog(this, "NUMERO DE HABITACION VACIO");
+        }
+        else {
+            
+            try {
+                Connection cn = DriverManager.getConnection("jdbc:mysql://localhost/hotel", "root", "");
+                Statement pst = cn.createStatement();
+                ResultSet rs = pst.executeQuery("Select NumHab "
+                        + "from numerohabitacion where NumHab="
+                        + NumHab);
+                if(rs.next()){
+                    String n = rs.getString("NumHab");
+                    System.out.println("NumHab: " + rs.getString("NumHab"));
+                }else{
+                    System.out.println("No existe");
+                }
+                cn.close();
+                
+                
+               
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+            
+            //**************************************************************************
+            /*String query = "delete from huespedes where NumHab = "+"'"+NumHab+"'";
+            int j = this.conn.Update(query);
+            if (j>0)
+            JOptionPane.showMessageDialog(this, "baja realizada");
+            else
+            JOptionPane.showMessageDialog(this, "lA BAJA NO SE REALIZO");*/
+        }
+    }//GEN-LAST:event_jButtonBajaActionPerformed
 
     /**
      * @param args the command line arguments
