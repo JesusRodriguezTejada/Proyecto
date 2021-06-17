@@ -190,7 +190,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
     private void jButtonOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOutActionPerformed
         // TODO add your handling code here:
-                checkout menu = new checkout();
+                Checkout menu = new Checkout();
         menu.setVisible(true);
         this.dispose();
         
