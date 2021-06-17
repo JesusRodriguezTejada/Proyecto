@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public class Hotel {
     private float fianzas;
     private  ArrayList<Huesped> listaHupedes;
-    private Habitacion[] CantidadHabitaciones;//fijar los datos de la lista 
+    public  Habitacion[] CantidadHabitaciones;//fijar los datos de la lista 
     
     public Habitacion[] llenarHotel(){
         float sen=1060,dob=1500,triple=2050;

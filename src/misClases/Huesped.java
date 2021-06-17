@@ -1,10 +1,10 @@
 package misClases;
 
 public class Huesped {
-    private String nombre;
-    private String fechaIngreso;
-    private String fechaSalida;
-    private Habitacion hab;
+    public String nombre;
+    public String fechaIngreso;
+    public String fechaSalida;
+    public Habitacion hab;
     private String tipoHabitacion;
     private int numHab;
     private float totalPagar;
