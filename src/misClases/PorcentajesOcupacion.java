@@ -94,22 +94,19 @@ public class PorcentajesOcupacion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 private void graficaBarras(){
-        int sencilla=1, triple=1, doble=1;
+        int sencilla=1, triple=1, doble=1;//se fija en un uno por de lo contrario no marca bien las graficas 
         ///coidgo para ver el porsentaje de peronas que ocupan el cada habitacion 
         
         String query = "SELECT * FROM huespedes ";
         this.conn.Consult(query);
-         
-        this.conn.Consult(query);
+       
         Object aux   = new Object() ;
         String aux2 = null,Sen="Sensilla",Do="Doble",Tri="Triple";
-        int s=0, t=0,D=0;
         try{
            while (this.conn.rs.next()) {
             //Obtienes la data que necesitas...
                aux=this.conn.rs.getString(6);
                aux2=(String) aux;
-               
                if(aux2.equals(Sen)){
                   sencilla++;
                    
@@ -121,8 +118,6 @@ private void graficaBarras(){
                if(aux2.equals(Tri)){
                   triple++;
                }
-              // System.out.println(aux);
-               //System.out.println(aux2);
               
            
         }
