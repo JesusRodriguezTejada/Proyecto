@@ -4,7 +4,11 @@
 
 
 <<<<<<< HEAD
+Gilberto $2460 pesosGilberto $2460 pesos
+=======
+<<<<<<< HEAD
 Nombre: Gilberto $2460 pesos
 =======
 Gilberto $2460 pesosGilberto $2460 pesos
 >>>>>>> c90f50dc4681fa50deefe9949a6aaa208d7a9480
+>>>>>>> 2c40723c684cb9d8cc28a5d0a4898544ae9dea9a

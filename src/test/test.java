@@ -68,10 +68,26 @@ public class test {
         //new ConsultaPorNombre(objConn).setVisible(true);
         //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
        //new ConsultaPorHabitacion(objConn).setVisible(true);
+<<<<<<< HEAD
+        PorcentajesOcupacionHabitacion();
+        
+=======
         //PorcentajesOcupacionHabitacion();
   
+>>>>>>> 135366a0770116286e88ca3307ad2d543b119825
 
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     public void PorcentajesOcupacionHabitacion(){
         new PorcentajesOcupacion(objConn).setVisible(true);
     }
