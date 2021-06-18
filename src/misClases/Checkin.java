@@ -178,7 +178,7 @@ public class Checkin extends javax.swing.JFrame {
                                     .addComponent(jTextFieldDias, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                                     .addComponent(jLabel7)
-                                    .addGap(72, 72, 72)
+                                    .addGap(55, 55, 55)
                                     .addComponent(jDateChooserFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(145, 145, 145)
@@ -203,11 +203,8 @@ public class Checkin extends javax.swing.JFrame {
                 .addGap(14, 14, 14)
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel7)
-                        .addGap(32, 32, 32))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel3)
                             .addComponent(TipoHabitacion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -233,8 +230,9 @@ public class Checkin extends javax.swing.JFrame {
                             .addComponent(jLabel8)
                             .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jDateChooserFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(21, 21, 21)))
+                        .addComponent(jDateChooserFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING))
+                .addGap(32, 32, 32)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -279,8 +277,6 @@ public class Checkin extends javax.swing.JFrame {
         
         MySqlConn cc = new MySqlConn();
         Connection con = cc.MySqlConn1();
-        
-        
         nombre = this.jTextFieldNombre.getText();
         tipoHabitacion = (String) this.TipoHabitacion.getSelectedItem();
         ciudad = this.jTextFieldCiudad.getText();
@@ -301,7 +297,7 @@ public class Checkin extends javax.swing.JFrame {
        
         personasExtras =  (String) this.jSpinner1.getValue();
 
-        //codigo de connecion de registro de MySql
+        //codigo de connicion de registro de MySql
          try{
             String sql = "Insert into huespedes  (NumHab, Nombre,Piso,FechaEntrada,FechaSalida, TipoHabitacion,Personas,PersonasExtras,Ciudad,Dias) values(?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement pst = con.prepareStatement(sql);
@@ -315,6 +311,8 @@ public class Checkin extends javax.swing.JFrame {
             pst.setString(8, personasExtras);
             pst.setString(9, ciudad);
             pst.setString(10, dias);
+
+            
             pst.execute();
             JOptionPane.showMessageDialog(null, "Registro exitoso");
         }catch(Exception e){

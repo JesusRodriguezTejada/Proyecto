@@ -105,7 +105,7 @@ private void graficaBarras(){
         try{
            while (this.conn.rs.next()) {
             //Obtienes la data que necesitas...
-               aux=this.conn.rs.getString("TipoHab");
+               aux=this.conn.rs.;
                if(aux=="Sensilla"){
                    System.out.println("1");
                    

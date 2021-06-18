@@ -4,7 +4,6 @@ package controlMySql;
 
 import java.sql.Connection;//interface
 import java.sql.DriverManager;//clase
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;//interface
 import java.sql.ResultSet;//interface
@@ -12,10 +11,9 @@ import javax.swing.JOptionPane;
 
 public class MySqlConn {
     public Statement stmt = null;
-    public  ResultSet rs= null;
+    public ResultSet rs= null;
     public Connection conn=null;
      Connection conectar=null;
-    ResultSet resultado= null;
 
     public MySqlConn(){
         //Conectar con mysql...
@@ -53,9 +51,6 @@ public class MySqlConn {
             System.out.println("Error: " + ex.getErrorCode());
         }
     }
-    
-    
-    
     public int Update(String query){
         //information_schema
         int rModif=0;
@@ -106,23 +101,5 @@ public Connection MySqlConn1(){
             } catch (SQLException sqlEx) { } // ignore
             rs = null;
     }
-    public void ocupacion(){
-        int x = 0;
-        int total = 0;
-        try {
-            while (rs.next()) {
-                //Obtienes la data que necesitas...
-                total++;
-            }
-        } catch (SQLException ex) {
-            //Logger.getLogger(test.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        System.out.println("total");
-        //return total;
-        
-    }
 
-    public PreparedStatement prepareStatement(String sql) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

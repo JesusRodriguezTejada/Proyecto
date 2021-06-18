@@ -21,8 +21,6 @@ import java.sql.Struct;
 import java.util.Map;
 import java.util.Properties;
 import java.util.concurrent.Executor;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import static javax.management.remote.JMXConnectorFactory.connect;
 import static javax.management.remote.JMXConnectorFactory.connect;
 import misClases.Checkin;
@@ -30,36 +28,20 @@ import misClases.Checkout;
 import misClases.ConsultaOrdenAlfabetico;
 import misClases.ConsultaPorHabitacion;
 import misClases.ConsultaPorNombre;
-import misClases.Ocupacion;
-import misClases.PorcentajesOcupacion;
 
 public class test {
 
     MySqlConn objConn = new MySqlConn();
-     MySqlConn a = new MySqlConn();
 
-
-
-    public test() {       
-
+    public test() {
         // new Checkin(objConn).setVisible(true);
-        // new Checkout(objConn).setVisible(true);
+        new Checkout(objConn).setVisible(true);
         //new ConsultaPorNombre(objConn).setVisible(true);
         //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
        //new ConsultaPorHabitacion(objConn).setVisible(true);
-        //porcentajeOcupacionHotel();
-        new   PorcentajesOcupacion(objConn).setVisible(true);
+          
     }
 
-  
-
-    public void porcentajeOcupacionHotel(){
-       try {         
-           new Ocupacion(objConn).setVisible(true);
-        } catch (SQLException ex) {
-            Logger.getLogger(test.class.getName()).log(Level.SEVERE, null, ex);
-        }
-    }
     public void chek() {
         new Checkin(objConn).setVisible(true);
     }
@@ -68,5 +50,12 @@ public class test {
         new test();
     }
 
+    public int ocupacion() {
+        int x = 0;
+       
+    
+    return x ;
+
+}
 
 }

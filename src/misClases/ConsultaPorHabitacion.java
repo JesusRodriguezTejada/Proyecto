@@ -9,9 +9,12 @@ import controlMySql.MySqlConn;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
-
+/**
+ *
+ * @author Alondra paulina v
+ */
 public class ConsultaPorHabitacion extends javax.swing.JFrame {
-    MySqlConn conn;
+MySqlConn conn;
     /**
      * Creates new form ConsultaPorHabitacion
      */
