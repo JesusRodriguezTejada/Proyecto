@@ -130,6 +130,9 @@ MySqlConn conn;
                  System.out.println("entreee");
         String Ordenamiento = "Select * from huespedes ORDER BY Nombre ASC";
         this.conn.Consult(Ordenamiento);
+               System.out.println("Consulta1");
+        String query = "Select * from huespedes ORDER BY Nombre ASC";
+        this.conn.Consult(query);
         int n = 0;
         try{
             this.conn.rs.last();

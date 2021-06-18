@@ -13,8 +13,10 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Alondra paulina v
  */
+
 public class ConsultaHabitacion extends javax.swing.JFrame {
    MySqlConn conn;
+
     /**
      * Creates new form ConsultaHabitacion
      */

@@ -1,15 +1,8 @@
 
 package misClases;
 
-import controlMySql.MySqlConn;
 import java.awt.BorderLayout;
 import java.awt.Dimension;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
@@ -18,40 +11,9 @@ import org.jfree.data.general.DefaultPieDataset;
 
 public class Ocupacion extends javax.swing.JFrame {
 
-    MySqlConn conn;
-    //MySqlConn objConn = new MySqlConn();
-    
-    
-    public Ocupacion(MySqlConn conn) throws SQLException {
-        this.conn = conn;
-        initComponents();    
-    }
 
     public Ocupacion() {
-        initComponents(); 
-    }
-    
-    
-        public int ocupacion() throws SQLException {
-        int total = 0;
-        //  String sql = "SELECT * form  cliente";
-        
-        //cn.prepareStatement(sql); 
-           String query = "SELECT * FROM huespedes ";
-           this.conn.Consult(query);
-         
-        this.conn.Consult(query);
-        try{
-           while (this.conn.rs.next()) {
-            //Obtienes la data que necesitas...
-            total++;
-        }
-        } catch (Exception e){
-            System.out.println("eRROR #1...");
-        }
-
-        return total;
-        
+        initComponents();
     }
 
 
@@ -62,7 +24,6 @@ public class Ocupacion extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jButtonVerOcupacion = new javax.swing.JButton();
         jPanelgrafica = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,38 +40,31 @@ public class Ocupacion extends javax.swing.JFrame {
         jPanelgrafica.setLayout(jPanelgraficaLayout);
         jPanelgraficaLayout.setHorizontalGroup(
             jPanelgraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 466, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         jPanelgraficaLayout.setVerticalGroup(
             jPanelgraficaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 406, Short.MAX_VALUE)
         );
 
-        jButton1.setText("Atras");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanelgrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButtonVerOcupacion)))
+                .addGap(109, 109, 109)
+                .addComponent(jButtonVerOcupacion)
+                .addContainerGap(125, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanelgrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButtonVerOcupacion)
-                    .addComponent(jButton1))
+                .addComponent(jButtonVerOcupacion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanelgrafica, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
@@ -137,14 +91,11 @@ public class Ocupacion extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonVerOcupacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVerOcupacionActionPerformed
-
-        int vacio=0,ocupado=0;
-        try {
-            ocupado = ocupacion();
-        } catch (SQLException ex) {
-            Logger.getLogger(Ocupacion.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        vacio=30-ocupado;
+        // TODO add your handling code here:
+        int ocupado = 65;
+        int vacio = 35;
+        
+        
         //tabla
         DefaultPieDataset tabla = new DefaultPieDataset();
         tabla.setValue("Sin ocupar", vacio);
@@ -189,7 +140,6 @@ public class Ocupacion extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            @Override
             public void run() {
                 new Ocupacion().setVisible(true);
             }
@@ -197,7 +147,6 @@ public class Ocupacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonVerOcupacion;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanelgrafica;
