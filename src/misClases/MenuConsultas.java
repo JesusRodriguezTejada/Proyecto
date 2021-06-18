@@ -156,22 +156,26 @@ public class MenuConsultas extends javax.swing.JFrame {
     private void jMenuItemConsultaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaNombreActionPerformed
         // TODO add your handling code here:
         
-       ConsultaPorNombre form = new ConsultaPorNombre();
-        form.setVisible(true);
-        this.dispose();
+       //ConsultaPorNombre form = new ConsultaPorNombre();
+        //form.setVisible(true);
+        //this.dispose();
         
     }//GEN-LAST:event_jMenuItemConsultaNombreActionPerformed
 
     private void jMenuItemOrdenadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOrdenadosActionPerformed
         // TODO add your handling code here:
-        ConsultaOrdenAlfabetico hola = new ConsultaOrdenAlfabetico();
-        hola.setVisible(true);
-        this.dispose();
+        //ConsultaOrden hola = new ConsultaOrden();
+        //hola.setVisible(true);
+       // this.dispose();
+        //ConsultaOrdenamiento hola = new ConsultaOrdenamiento();
+       // hola.setVisible(true);
+       // this.dispose();
+        
     }//GEN-LAST:event_jMenuItemOrdenadosActionPerformed
 
     private void jButtonRegrsarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegrsarActionPerformed
         // TODO add your handling code here:
-        MenuPrincipal Atras = new MenuPrincipal();
+        MenuSistema Atras = new MenuSistema();
         Atras.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonRegrsarActionPerformed

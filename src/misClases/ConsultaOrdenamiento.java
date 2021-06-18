@@ -13,21 +13,15 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Alondra paulina v
  */
-public class ConsultaOrdenAlfabetico extends javax.swing.JFrame {
+public class ConsultaOrdenamiento extends javax.swing.JFrame {
 MySqlConn conn;
     /**
-     * Creates new form ConsultaOrdenAlfabetico
+     * Creates new form ConsultaAlfabeticamente
      */
-    public ConsultaOrdenAlfabetico(MySqlConn conn) {
-           this.conn = conn;
+    public ConsultaOrdenamiento(MySqlConn conn) {
+         this.conn = conn;
         initComponents();
     }
-
-    public ConsultaOrdenAlfabetico() {
-        
-    }
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -39,43 +33,40 @@ MySqlConn conn;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jButtonRegresar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableConsulta = new javax.swing.JTable();
+        jTextField1 = new javax.swing.JTextField();
         jButtonBuscar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(131, 107, 134));
 
+        jButtonRegresar.setBackground(new java.awt.Color(101, 21, 61));
+        jButtonRegresar.setFont(new java.awt.Font("Dotum", 1, 18)); // NOI18N
+        jButtonRegresar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRegresar.setText("Regresar");
+        jButtonRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegresarActionPerformed(evt);
+            }
+        });
+
         jTableConsulta.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
                 {null, null}
             },
             new String [] {
-                "NumHabitacio", "Nombre"
+                "NumHab", "Nombre"
             }
         ));
         jScrollPane1.setViewportView(jTableConsulta);
+
+        jTextField1.setBackground(new java.awt.Color(131, 107, 134));
+        jTextField1.setFont(new java.awt.Font("Dotum", 1, 14)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+        jTextField1.setText("Presione Consultar para ordenar:");
 
         jButtonBuscar.setBackground(new java.awt.Color(101, 21, 61));
         jButtonBuscar.setFont(new java.awt.Font("Dotum", 1, 18)); // NOI18N
@@ -87,32 +78,36 @@ MySqlConn conn;
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Dotum", 1, 14)); // NOI18N
-        jLabel1.setText("Presione Para ordenar por orden alfabetico:");
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(35, 35, 35)
-                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(130, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(26, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 273, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(jButtonRegresar)
+                .addGap(18, 18, 18))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 87, Short.MAX_VALUE)
-                    .addComponent(jButtonBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(jButtonBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE)))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButtonRegresar, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -132,9 +127,9 @@ MySqlConn conn;
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
         // TODO add your handling code here:
-         System.out.println("Consulta1");
-        String query = "Select * from huespedes ORDER BY Nombre ASC";
-        this.conn.Consult(query);
+                 System.out.println("entreee");
+        String Ordenamiento = "Select * from huespedes ORDER BY Nombre ASC";
+        this.conn.Consult(Ordenamiento);
         int n = 0;
         try{
             this.conn.rs.last();
@@ -160,12 +155,20 @@ MySqlConn conn;
             }
             String columnas [] = { "NumHab", "Nombre"};
             jTableConsulta.setModel(new DefaultTableModel(datos,columnas));
-            System.out.println("tabla lista");
+            System.out.println("llena tabla");
         }//fin del if
         else{
-            JOptionPane.showMessageDialog(this, "Esta persona no esta registrada");
+            JOptionPane.showMessageDialog(this, "Esta persona no esta registrada todavia");
+    }  
     }//GEN-LAST:event_jButtonBuscarActionPerformed
-    }
+
+    private void jButtonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarActionPerformed
+        // TODO add your handling code here:
+                MenuSistema Menu = new MenuSistema();
+        Menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonRegresarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -183,30 +186,34 @@ MySqlConn conn;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ConsultaOrdenAlfabetico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaOrdenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ConsultaOrdenAlfabetico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaOrdenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ConsultaOrdenAlfabetico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaOrdenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ConsultaOrdenAlfabetico.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaOrdenamiento.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                  MySqlConn objConn = null;
-                new ConsultaOrdenAlfabetico(objConn).setVisible(true);
+                new ConsultaOrdenamiento(objConn).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBuscar;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton jButtonRegresar;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableConsulta;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

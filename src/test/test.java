@@ -27,9 +27,12 @@ import static javax.management.remote.JMXConnectorFactory.connect;
 import static javax.management.remote.JMXConnectorFactory.connect;
 import misClases.Checkin;
 import misClases.Checkout;
-import misClases.ConsultaOrdenAlfabetico;
-import misClases.ConsultaPorHabitacion;
-import misClases.ConsultaPorNombre;
+import misClases.ConsultaOrdenamiento;
+import misClases.ConsultaHabitacion;
+import misClases.ConsultaNombre;
+
+
+
 import misClases.Ocupacion;
 
 public class test {
@@ -41,11 +44,11 @@ public class test {
 
     public test() {       
 
-        new Checkin(objConn).setVisible(true);
+      //new Checkin(objConn).setVisible(true);
         // new Checkout(objConn).setVisible(true);
-        //new ConsultaPorNombre(objConn).setVisible(true);
-        //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
-       //new ConsultaPorHabitacion(objConn).setVisible(true);
+      // new ConsultaNombre(objConn).setVisible(true);
+      //new ConsultaOrdenamiento(objConn).setVisible(true);
+       new ConsultaHabitacion(objConn).setVisible(true);
        // porcentajeOcupacion();
     }
 
