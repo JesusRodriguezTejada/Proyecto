@@ -25,12 +25,12 @@ public class VaciaDatos extends javax.swing.JFrame {
     MySqlConn conn;
 
     public VaciaDatos(MySqlConn conn) {
-       initComponents();
+        initComponents();
           
     }
 
     public VaciaDatos() {
-        initComponents();
+        //initComponents();
     }
 
     public DefaultTableModel mostrarHurdprdes() {
@@ -86,7 +86,7 @@ public class VaciaDatos extends javax.swing.JFrame {
          return modelo;
     }
 
-    }
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

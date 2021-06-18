@@ -354,13 +354,13 @@ public class Checkout extends javax.swing.JFrame {
             jTextFieldPrecio1.setText(precio1);
         }
         if(jRadioButtonBar.isSelected()){
-            mensaje+="300";
+            //mensaje+="300";
             
         }
         if(jRadioButtonCuarto.isSelected()){
-            mensaje+="250";
+            //mensaje+="250";
         }
-        jTextFieldMostrarPrecio.setText(mensaje);
+        //jTextFieldMostrarPrecio.setText(mensaje);
     }//GEN-LAST:event_jButtonMostrarTotalActionPerformed
 
     private void jTextFieldPrecio4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldPrecio4ActionPerformed

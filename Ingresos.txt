@@ -3,4 +3,8 @@
 		Ingresos del hotel 
 
 
+<<<<<<< HEAD
 Nombre: Gilberto $2460 pesos
+=======
+Gilberto $2460 pesosGilberto $2460 pesos
+>>>>>>> c90f50dc4681fa50deefe9949a6aaa208d7a9480
