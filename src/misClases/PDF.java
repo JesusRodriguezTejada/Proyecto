@@ -96,7 +96,7 @@ public class PDF extends javax.swing.JFrame {
         
         try {
             String ruta = System.getProperty("user.home");
-            PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Desktop/Reporte_Alumnos.pdf"));
+            PdfWriter.getInstance(documento, new FileOutputStream(ruta + "/Escritorio/Reporte.pdf"));
             
             Image header = Image.getInstance("src/misimagenes/firma.jpg");
             header.scaleToFit(100, 100);
@@ -106,15 +106,17 @@ public class PDF extends javax.swing.JFrame {
             header2.setAlignment(Chunk.ALIGN_CENTER);
             
             documento.open();
-            PdfPTable tabla = new PdfPTable(7);
+            PdfPTable tabla = new PdfPTable(10);
+            tabla.addCell("NumHab");
             tabla.addCell("Nombre");
-            tabla.addCell("Habitacion");
-            tabla.addCell("Ciudad");
-            tabla.addCell("Personas");
-            tabla.addCell("Dias");
-            tabla.addCell("Num Habitacion");
             tabla.addCell("Piso");
-            
+            tabla.addCell("FechaEntrada");
+            tabla.addCell("FechaSalida");
+            tabla.addCell("TipoHabitacion");
+            tabla.addCell("Personas");
+            tabla.addCell("PersonasExtras");
+            tabla.addCell("Ciudad");
+            tabla.addCell("Dias");
             
             
             try {
@@ -135,6 +137,8 @@ public class PDF extends javax.swing.JFrame {
                 Date date = new Date();
                 DateFormat dateformat = new SimpleDateFormat("dd/MM/yyyy");
                 
+                
+                
                 documento.add(header2);
                 documento.add(Chunk.NEWLINE);
                 documento.add(Chunk.NEWLINE);
@@ -147,15 +151,15 @@ public class PDF extends javax.swing.JFrame {
                 documento.add(new Paragraph("Fecha: " + dateformat.format(date)));
                 documento.add(Chunk.NEWLINE);
                 if (rs.next()){
-                    documento.add(new Paragraph("Nombre del huesped: " + rs.getString(1)));
-                    documento.add(new Paragraph("Ciudad de origen: " + rs.getString(3)));
-                    documento.add(new Paragraph("Fecha de ingreso: " ));
-                    documento.add(new Paragraph("Fecha de salida: " ));
-                    documento.add(new Paragraph("Tipo de habitacion: " + rs.getString(2)));
+                    documento.add(new Paragraph("Nombre del huesped: " + rs.getString(2)));
+                    documento.add(new Paragraph("Ciudad de origen: " + rs.getString(9)));
+                    documento.add(new Paragraph("Fecha de ingreso: " + rs.getString(4)));
+                    documento.add(new Paragraph("Fecha de salida: " + rs.getString(5)));
+                    documento.add(new Paragraph("Tipo de habitacion: " + rs.getString(6)));
                 }
                 
                 documento.add(new Paragraph("Costo de habitacion: " ));
-                documento.add(new Paragraph("Dias en el hotel: " + rs.getString(5)));
+                documento.add(new Paragraph("Dias en el hotel: " + rs.getString(10)));
                 documento.add(new Paragraph("Total a pagar sin cargos extras: " ));
                 documento.add(new Paragraph("Total a pagar con cargos extras: " ));
                 documento.add(new Paragraph("Lista de cargos extras: " ));

@@ -54,10 +54,8 @@ public class Ingresos {
                     
                     wr.write("\n\n\t\tIngresos del hotel \n\n\n");
                     wr.write(rs.getString(2) + " $" + ingresos + " pesos");
-<<<<<<< HEAD
-=======
                     wr.write(rs.getString(2) + " $" + ingresos + " pesos");
->>>>>>> c90f50dc4681fa50deefe9949a6aaa208d7a9480
+                    wr.write(rs.getString(2) + " $" + ingresos + " pesos");
                     /*documento.add(new Paragraph("Nombre del huesped: " + rs.getString(1)));
                     documento.add(new Paragraph("Ciudad de origen: " + rs.getString(3)));
                     documento.add(new Paragraph("Fecha de ingreso: " ));
@@ -103,4 +101,5 @@ public class Ingresos {
         Ingresos ing = new Ingresos();
         ing.Comprobante("Ingresos.txt");
     }
+
 }
