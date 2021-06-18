@@ -336,30 +336,40 @@ public class Checkout extends javax.swing.JFrame {
 
     private void jButtonMostrarTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMostrarTotalActionPerformed
         // TODO add your handling code here:
-        
-        int suma;
+        int num1 = 0, num2 =0,num3 =0, num4 =0, num5=0,total=0;
+        //int suma;
         if (jRadioButtonNiñera.isSelected()){
             String precio1= "350";
             jTextFieldPrecio1.setText(precio1);
             //mensaje += "350";
+            num1 = Integer.parseInt(jTextFieldPrecio1.getText());
         }
         if(jRadioButtonSpa.isSelected()){
             String precio2= "400";
             jTextFieldPrecio2.setText(precio2);
            // mensaje+="400";
+            num2= Integer.parseInt(jTextFieldPrecio2.getText());
         }
         if(jRadioButtonTintoreria.isSelected()){
-            //mensaje+="500";
-            String precio1= "250";
-            jTextFieldPrecio1.setText(precio1);
+            String precio3= "250";
+            jTextFieldPrecio3.setText(precio3);
+            num3= Integer.parseInt(jTextFieldPrecio3.getText());
         }
         if(jRadioButtonBar.isSelected()){
             //mensaje+="300";
-            
+                                  String precio4= "300";
+            jTextFieldPrecio4.setText(precio4);
+            num4= Integer.parseInt(jTextFieldPrecio4.getText());
         }
         if(jRadioButtonCuarto.isSelected()){
             //mensaje+="250";
+                                  String precio5= "250";
+            jTextFieldPrecio5.setText(precio5);
+            num5= Integer.parseInt(jTextFieldPrecio5.getText());
         }
+           total= num1+num2+num3+num4+num5;
+        
+        jTextFieldMostrarPrecio.setText(String.valueOf(total));
         //jTextFieldMostrarPrecio.setText(mensaje);
     }//GEN-LAST:event_jButtonMostrarTotalActionPerformed
 

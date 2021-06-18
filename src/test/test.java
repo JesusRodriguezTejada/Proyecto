@@ -28,18 +28,31 @@ import misClases.Checkout;
 import misClases.ConsultaOrdenAlfabetico;
 import misClases.ConsultaPorHabitacion;
 import misClases.ConsultaPorNombre;
+import misClases.PorcentajesOcupacion;
 
 public class test {
 
     MySqlConn objConn = new MySqlConn();
 
+
     public test() {
         // new Checkin(objConn).setVisible(true);
-        new Checkout(objConn).setVisible(true);
+        ///new Checkout(objConn).setVisible(true);
         //new ConsultaPorNombre(objConn).setVisible(true);
         //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
        //new ConsultaPorHabitacion(objConn).setVisible(true);
-          
+
+      //  new Checkin(objConn).setVisible(true);
+        // new Checkout(objConn).setVisible(true);
+        //new ConsultaPorNombre(objConn).setVisible(true);
+        //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
+       //new ConsultaPorHabitacion(objConn).setVisible(true);
+        //PorcentajesOcupacionHabitacion();
+        
+
+    }
+    public void PorcentajesOcupacionHabitacion(){
+        new PorcentajesOcupacion(objConn).setVisible(true);
     }
 
     public void chek() {

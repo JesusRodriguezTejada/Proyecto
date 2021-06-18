@@ -102,21 +102,28 @@ private void graficaBarras(){
          
         this.conn.Consult(query);
         Object aux   = new Object() ;
+        String aux2 = null,Sen="Sensilla",Do="Doble",Tri="Triple";
+        int s=0, t=0,D=0;
         try{
            while (this.conn.rs.next()) {
             //Obtienes la data que necesitas...
-               aux=this.conn.rs.;
-               if(aux=="Sensilla"){
-                   System.out.println("1");
-                   
-               }
-               if(aux=="Double"){  
-                   
-               }
-               if(aux=="Triple"){
-               }
+               aux=this.conn.rs.getString(6);
+               aux2=(String) aux;
                
-               System.out.println(conn.rs);
+               if(aux2.equals(Sen)){
+                  sencilla++;
+                   
+               }
+               if(aux2.equals(Do)){  
+                    doble++;
+                   
+               }
+               if(aux2.equals(Tri)){
+                  triple++;
+               }
+              // System.out.println(aux);
+               //System.out.println(aux2);
+              
            
         }
         } catch (Exception e){
