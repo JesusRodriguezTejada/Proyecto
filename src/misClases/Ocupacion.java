@@ -37,8 +37,8 @@ public class Ocupacion extends javax.swing.JFrame {
         //  String sql = "SELECT * form  cliente";
         
         //cn.prepareStatement(sql); 
-           String query = "SELECT * FROM huespedes ";
-           this.conn.Consult(query);
+        String query = "SELECT * FROM huespedes ";
+        this.conn.Consult(query);
          
         this.conn.Consult(query);
         try{

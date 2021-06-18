@@ -31,6 +31,7 @@ import misClases.ConsultaOrdenAlfabetico;
 import misClases.ConsultaPorHabitacion;
 import misClases.ConsultaPorNombre;
 import misClases.Ocupacion;
+import misClases.PorcentajesOcupacion;
 
 public class test {
 
@@ -46,12 +47,13 @@ public class test {
         //new ConsultaPorNombre(objConn).setVisible(true);
         //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
        //new ConsultaPorHabitacion(objConn).setVisible(true);
-        porcentajeOcupacion();
+        //porcentajeOcupacionHotel();
+        new   PorcentajesOcupacion(objConn).setVisible(true);
     }
 
   
 
-    public void porcentajeOcupacion(){
+    public void porcentajeOcupacionHotel(){
        try {         
            new Ocupacion(objConn).setVisible(true);
         } catch (SQLException ex) {
