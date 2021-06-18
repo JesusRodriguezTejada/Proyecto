@@ -94,7 +94,7 @@ public class PorcentajesOcupacion extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 private void graficaBarras(){
-        int sencilla=0, triple=0, doble=0;
+        int sencilla=1, triple=1, doble=1;
         ///coidgo para ver el porsentaje de peronas que ocupan el cada habitacion 
         
         String query = "SELECT * FROM huespedes ";

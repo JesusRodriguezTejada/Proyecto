@@ -25,8 +25,7 @@ import static javax.management.remote.JMXConnectorFactory.connect;
 import static javax.management.remote.JMXConnectorFactory.connect;
 import misClases.Checkin;
 import misClases.Checkout;
-/*
-<<<<<<< HEAD
+
 import misClases.ConsultaOrdenamiento;
 import misClases.ConsultaHabitacion;
 import misClases.ConsultaNombre;
@@ -51,30 +50,30 @@ public class test {
         //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
        //new ConsultaPorHabitacion(objConn).setVisible(true);
 
-///<<<<<<< HEAD
+
    // public test() {       
 
       //new Checkin(objConn).setVisible(true);
         // new Checkout(objConn).setVisible(true);
       // new ConsultaNombre(objConn).setVisible(true);
       //new ConsultaOrdenamiento(objConn).setVisible(true);
-       new ConsultaHabitacion(objConn).setVisible(true);
-       // porcentajeOcupacion();
-    } 
-    /*
-=======
+       //new ConsultaHabitacion(objConn).setVisible(true);
+    //  // porcentajeOcupacion();
+   /// } 
+    
+
       //  new Checkin(objConn).setVisible(true);
         // new Checkout(objConn).setVisible(true);
         //new ConsultaPorNombre(objConn).setVisible(true);
         //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
        //new ConsultaPorHabitacion(objConn).setVisible(true);
-<<<<<<< HEAD
+
         PorcentajesOcupacionHabitacion();
         
-=======
+
         //PorcentajesOcupacionHabitacion();
   
->>>>>>> 135366a0770116286e88ca3307ad2d543b119825
+
 
     }
     
@@ -108,4 +107,4 @@ public class test {
 
 }
 
-}*/
+}
