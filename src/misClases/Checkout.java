@@ -329,7 +329,7 @@ public class Checkout extends javax.swing.JFrame {
 
     private void jButtonMenuPrincipalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonMenuPrincipalActionPerformed
         // TODO add your handling code here:
-        MenuPrincipal Regresar = new MenuPrincipal();
+        MenuSistema Regresar = new MenuSistema();
         Regresar.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButtonMenuPrincipalActionPerformed

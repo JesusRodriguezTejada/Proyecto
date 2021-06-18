@@ -71,7 +71,7 @@ public final class Presentacion extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabelHotel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jButtonIrAMenu = new javax.swing.JButton();
         jLabelLogo = new javax.swing.JLabel();
         jLabelDentro = new javax.swing.JLabel();
         jLabelAlberca = new javax.swing.JLabel();
@@ -111,13 +111,13 @@ public final class Presentacion extends javax.swing.JFrame {
 
         jLabelHotel1.setText("jLabel6");
 
-        jButton1.setBackground(new java.awt.Color(195, 66, 44));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Menu");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonIrAMenu.setBackground(new java.awt.Color(195, 66, 44));
+        jButtonIrAMenu.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jButtonIrAMenu.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonIrAMenu.setText("Menu");
+        jButtonIrAMenu.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonIrAMenuActionPerformed(evt);
             }
         });
 
@@ -143,7 +143,7 @@ public final class Presentacion extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(jButtonIrAMenu)
                 .addGap(17, 17, 17))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -166,7 +166,7 @@ public final class Presentacion extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(jLabelHotel1, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jButtonIrAMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -274,12 +274,12 @@ public final class Presentacion extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jButtonStopActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonIrAMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIrAMenuActionPerformed
         // TODO add your handling code here:
-        MenuPrincipal Menu = new MenuPrincipal();
+        MenuSistema Menu = new MenuSistema();
         Menu.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonIrAMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -329,7 +329,7 @@ public final class Presentacion extends javax.swing.JFrame {
         
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonIrAMenu;
     private javax.swing.JButton jButtonPlay;
     private javax.swing.JButton jButtonStop;
     private javax.swing.JLabel jLabel1;

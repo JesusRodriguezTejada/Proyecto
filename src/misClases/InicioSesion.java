@@ -152,7 +152,7 @@ public final class InicioSesion extends javax.swing.JFrame {
         String Pass = new String (jPasswordFieldContra.getPassword());
         
         if(jTextFieldUsuario.getText().equals(Usuario) && jPasswordFieldContra.getText().equals(Contraseña)){
-            MenuPrincipal Menu = new MenuPrincipal();
+            MenuSistema Menu = new MenuSistema();
             Menu.setVisible(true);
             this.dispose();
             

@@ -16,21 +16,17 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author Alondra paulina v
  */
-public class ConsultaPorNombre extends javax.swing.JFrame {
+public class ConsultaNombre extends javax.swing.JFrame {
 MySqlConn conn;
     /**
-     * Creates new form Consulta
+     * Creates new form ConsultaNombre
      */
-    public ConsultaPorNombre(MySqlConn conn) {
-        this.conn = conn;
+    public ConsultaNombre(MySqlConn conn) {
+         this.conn = conn;
         initComponents();
         ImageIcon wallpaper = new ImageIcon("src/misimagenes/hotelsunset2.png");
         Icon icono = new ImageIcon(wallpaper.getImage().getScaledInstance(jLabelLogotipo.getWidth(), jLabelLogotipo.getHeight(), Image.SCALE_DEFAULT ));
         jLabelLogotipo.setIcon(icono);
-    }
-
-    public ConsultaPorNombre() {
-        
     }
 
     /**
@@ -43,47 +39,56 @@ MySqlConn conn;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jButtonRegresar = new javax.swing.JButton();
+        jButtonConsultar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableConsulta2 = new javax.swing.JTable();
-        jTextFieldHuesped = new javax.swing.JTextField();
-        jButtonBuscar = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jTextFieldHuesped = new javax.swing.JTextField();
         jLabelLogotipo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(166, 199, 123));
 
+        jButtonRegresar.setBackground(new java.awt.Color(30, 85, 38));
+        jButtonRegresar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButtonRegresar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonRegresar.setText("Regresar");
+        jButtonRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonRegresarActionPerformed(evt);
+            }
+        });
+
+        jButtonConsultar.setBackground(new java.awt.Color(30, 85, 38));
+        jButtonConsultar.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButtonConsultar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonConsultar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/misimagenes/lupa.png"))); // NOI18N
+        jButtonConsultar.setText("Consultar");
+        jButtonConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConsultarActionPerformed(evt);
+            }
+        });
+
         jTableConsulta2.setBackground(new java.awt.Color(68, 116, 75));
-        jTableConsulta2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTableConsulta2.setForeground(new java.awt.Color(255, 255, 255));
         jTableConsulta2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null}
             },
             new String [] {
-                "Nombre", "Nombre", "Piso"
+                "NumHab", "Nombre", "Piso"
             }
         ));
         jScrollPane1.setViewportView(jTableConsulta2);
 
-        jTextFieldHuesped.setBackground(new java.awt.Color(204, 235, 155));
-        jTextFieldHuesped.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTextFieldHuesped.setForeground(new java.awt.Color(255, 255, 255));
-
-        jButtonBuscar.setBackground(new java.awt.Color(30, 85, 38));
-        jButtonBuscar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/misimagenes/consulta.jpg"))); // NOI18N
-        jButtonBuscar.setText("Consultar");
-        jButtonBuscar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonBuscarActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setBackground(new java.awt.Color(204, 235, 155));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("INTRODUZCA EL NOMBRE DEL CLIENTE:");
+        jLabel1.setText("Introduzca el nombre del huesped:");
+
+        jTextFieldHuesped.setBackground(new java.awt.Color(166, 199, 123));
 
         jLabelLogotipo.setText("jLabel2");
 
@@ -92,60 +97,66 @@ MySqlConn conn;
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1)
+                .addContainerGap(81, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButtonBuscar)
-                            .addComponent(jTextFieldHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 366, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
-                        .addComponent(jLabelLogotipo, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(39, 39, 39))
+                        .addGap(17, 17, 17)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelLogotipo, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButtonConsultar)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonRegresar)))
+                .addGap(63, 63, 63))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(46, 46, 46)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jTextFieldHuesped)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(21, 21, 21)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 49, Short.MAX_VALUE)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextFieldHuesped, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButtonBuscar))
-                    .addComponent(jLabelLogotipo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jTextFieldHuesped, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabelLogotipo, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 161, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(57, 57, 57))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButtonConsultar)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButtonRegresar))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 342, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
+    private void jButtonConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConsultarActionPerformed
         // TODO add your handling code here:
-          // TODO add your handling code here:
-    
-        String query = "select * from huespedes where Nombre =" + "'" +
+                String consulta = "select * from huespedes where Nombre =" + "'" +
                 this.jTextFieldHuesped.getText().trim() + "'";
-        this.conn.Consult(query);
+        this.conn.Consult(consulta);
         int n =0;
         try{
             this.conn.rs.last();
@@ -176,13 +187,22 @@ MySqlConn conn;
             }
                String columnas [] = { "NumHab", "Nombre", "Piso"};
             jTableConsulta2.setModel(new DefaultTableModel(datos,columnas));
-            System.out.println("tabla lista");
+            System.out.println("llena tabla");
         
     }                                             
         else {
-            JOptionPane.showMessageDialog(this, "Esta Persona no ha sido registrada...");
+            JOptionPane.showMessageDialog(this, "Esta Persona no ha sido registrada");
         }
-    }//GEN-LAST:event_jButtonBuscarActionPerformed
+        
+        /////
+    }//GEN-LAST:event_jButtonConsultarActionPerformed
+
+    private void jButtonRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarActionPerformed
+        // TODO add your handling code here:
+        MenuSistema Menu = new MenuSistema();
+        Menu.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButtonRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -201,30 +221,28 @@ MySqlConn conn;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ConsultaPorNombre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaNombre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ConsultaPorNombre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaNombre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ConsultaPorNombre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaNombre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ConsultaPorNombre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ConsultaNombre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 MySqlConn objConn = null;
-                new ConsultaPorNombre(objConn).setVisible(true);
+                new ConsultaNombre(objConn).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButtonBuscar;
+    private javax.swing.JButton jButtonConsultar;
+    private javax.swing.JButton jButtonRegresar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabelLogotipo;
     private javax.swing.JPanel jPanel1;
