@@ -49,7 +49,7 @@ MySqlConn conn;
                 {null, null, null}
             },
             new String [] {
-                "NumHab", "Nombre", "Piso"
+                "Nombre", "Nombre", "Piso"
             }
         ));
         jScrollPane1.setViewportView(jTableConsulta2);
@@ -116,16 +116,19 @@ MySqlConn conn;
             
                     
                     }catch(Exception e){
-                        System.out.println("eRROR #1...");
+                        System.out.println("ERROR #1...");
                             
         }
         if(n != 0){
             System.out.println("n" +n);
              Object datos [][] = new Object [n][3];
             for (int i =0; i<n; i++){
+                
                 try{
-                    datos[i][0] = this.conn.rs.getInt(1);
+                    datos[i][0] = this.conn.rs.getString(1);
+                    
                     datos[i][1] = this.conn.rs.getString(2);
+                    
                     datos[i][2] = this.conn.rs.getString(3);
                     
                     this.conn.rs.next();

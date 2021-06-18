@@ -7,11 +7,13 @@ import java.sql.DriverManager;//clase
 import java.sql.SQLException;
 import java.sql.Statement;//interface
 import java.sql.ResultSet;//interface
+import javax.swing.JOptionPane;
 
 public class MySqlConn {
     public Statement stmt = null;
     public ResultSet rs= null;
     public Connection conn=null;
+     Connection conectar=null;
 
     public MySqlConn(){
         //Conectar con mysql...
@@ -63,7 +65,20 @@ public class MySqlConn {
         }
         return rModif;
     }
-
+public Connection MySqlConn1(){
+        try{
+            Class.forName("com.mysql.jdbc.Driver");
+            //conectar = DriverManager.getConnection("jdbc:mysql://localhost/pruebafechasjgfr","root","");
+            conectar = DriverManager.getConnection("jdbc:mysql://localhost/Hotel?"
+                            +"user=root&password=");
+            
+            JOptionPane.showMessageDialog(null, "Conexion Exitosa");
+            
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Error de Conexion" + e.getMessage());
+        }
+        return conectar;
+    }
 
     public void closeRsStmt(){
         if (rs != null) {
