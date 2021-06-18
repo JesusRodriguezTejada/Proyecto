@@ -55,6 +55,7 @@ public class Ingresos {
                     wr.write("\n\n\t\tIngresos del hotel \n\n\n");
                     wr.write(rs.getString(2) + " $" + ingresos + " pesos");
                     wr.write(rs.getString(2) + " $" + ingresos + " pesos");
+                    wr.write(rs.getString(2) + " $" + ingresos + " pesos");
                     /*documento.add(new Paragraph("Nombre del huesped: " + rs.getString(1)));
                     documento.add(new Paragraph("Ciudad de origen: " + rs.getString(3)));
                     documento.add(new Paragraph("Fecha de ingreso: " ));
@@ -79,6 +80,19 @@ public class Ingresos {
             } catch (Exception e) {
                 JOptionPane.showMessageDialog(null, "Error al crear el archivo");
             }
+        
+        /****************************************/
+        
+        
+        /*try {
+            
+            wr.write("Primer linea");
+            wr.append("\nsegunda linea");
+            wr.append("\nLinea final");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Error al crear el archivo");
+        }*/
+        
         wr.close();
         bw.close();
     }
@@ -89,4 +103,3 @@ public class Ingresos {
     }
 
 }
-    
