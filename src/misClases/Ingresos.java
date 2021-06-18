@@ -53,7 +53,7 @@ public class Ingresos {
                     int ingresos = hab$ + p$ + d$;
                     
                     wr.write("\n\n\t\tIngresos del hotel \n\n\n");
-                    wr.write("Nombre: " + rs.getString(2) + " $" + ingresos + " pesos");
+                    wr.write(rs.getString(2) + " $" + ingresos + " pesos");
                     /*documento.add(new Paragraph("Nombre del huesped: " + rs.getString(1)));
                     documento.add(new Paragraph("Ciudad de origen: " + rs.getString(3)));
                     documento.add(new Paragraph("Fecha de ingreso: " ));
