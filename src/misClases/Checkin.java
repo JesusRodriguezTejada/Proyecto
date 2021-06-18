@@ -126,7 +126,7 @@ public class Checkin extends javax.swing.JFrame {
 
         jLabel10.setText("Numero de habitacion:");
 
-        TipoHabitacion.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sensilla", "Doble", "Triple" }));
+        TipoHabitacion.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sencilla", "Doble", "Triple" }));
         TipoHabitacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TipoHabitacionActionPerformed(evt);
@@ -316,7 +316,23 @@ public class Checkin extends javax.swing.JFrame {
             pst.setString(9, ciudad);
             pst.setString(10, dias);
             pst.execute();
-            JOptionPane.showMessageDialog(null, "Registro exitoso");
+
+            
+            
+            
+         JOptionPane.showMessageDialog(null, "Registro exitoso");
+           ImprimirComprobante imprimir = new ImprimirComprobante();
+            imprimir.setVisible(true);
+            imprimir.jTextAreaComprobante.setText("Nombre" +nombre+ "\n"
+            +"Ciudad de origen" +ciudad+"\n"
+            //+"Ingreso"+fechaEntrada+"\n"
+            //+"Fecha de salida"+fechaSalida+
+              +"Habitacion"+tipoHabitacion+"\n"
+              +"Total de personas registradas en esta habitacion"+personas+"\n"
+                    
+            
+            
+            );
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, "Error de registro" + e.getMessage());
         }
