@@ -121,7 +121,7 @@ MySqlConn conn;
 
     private void jButtonBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscarActionPerformed
         // TODO add your handling code here:
-               System.out.println("Consulta1");
+         System.out.println("Consulta1");
         String query = "Select * from huespedes ORDER BY Nombre ASC";
         this.conn.Consult(query);
         int n = 0;

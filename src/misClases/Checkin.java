@@ -283,6 +283,8 @@ public class Checkin extends javax.swing.JFrame {
         
         MySqlConn cc = new MySqlConn();
         Connection con = cc.MySqlConn1();
+        
+        
         nombre = this.jTextFieldNombre.getText();
         tipoHabitacion = (String) this.TipoHabitacion.getSelectedItem();
         ciudad = this.jTextFieldCiudad.getText();
@@ -303,7 +305,7 @@ public class Checkin extends javax.swing.JFrame {
        
         personasExtras =  (String) this.jSpinner1.getValue();
 
-        //codigo de connicion de registro de MySql
+        //codigo de connecion de registro de MySql
          try{
             String sql = "Insert into huespedes  (NumHab, Nombre,Piso,FechaEntrada,FechaSalida, TipoHabitacion,Personas,PersonasExtras,Ciudad,Dias) values(?,?,?,?,?,?,?,?,?,?)";
             PreparedStatement pst = con.prepareStatement(sql);
@@ -317,8 +319,6 @@ public class Checkin extends javax.swing.JFrame {
             pst.setString(8, personasExtras);
             pst.setString(9, ciudad);
             pst.setString(10, dias);
-
-            
             pst.execute();
             JOptionPane.showMessageDialog(null, "Registro exitoso");
         }catch(Exception e){
