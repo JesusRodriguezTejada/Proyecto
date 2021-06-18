@@ -18,7 +18,7 @@ public class Checkin extends javax.swing.JFrame {
         initComponents();
         PisosHotel a = new PisosHotel();
         jTextFieldNumero.setText(a.numHab);
-        
+        //comentario
     }
     
     
