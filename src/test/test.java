@@ -38,15 +38,19 @@ public class test {
      MySqlConn a = new MySqlConn();
 
 
+
     public test() {       
 
-            //new Checkin(objConn).setVisible(true);
-            //new Checkout(objConn).setVisible(true);
-            //new ConsultaPorNombre(objConn).setVisible(true);
-            //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
-            // new ConsultaPorHabitacion(objConn).setVisible(true);
-  
+        // new Checkin(objConn).setVisible(true);
+        // new Checkout(objConn).setVisible(true);
+        //new ConsultaPorNombre(objConn).setVisible(true);
+        //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
+       //new ConsultaPorHabitacion(objConn).setVisible(true);
+        porcentajeOcupacion();
     }
+
+  
+
     public void porcentajeOcupacion(){
        try {         
            new Ocupacion(objConn).setVisible(true);
