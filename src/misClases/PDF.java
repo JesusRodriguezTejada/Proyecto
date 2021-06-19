@@ -49,49 +49,44 @@ public class PDF extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
-        jButton1.setBackground(new java.awt.Color(204, 51, 255));
-        jButton1.setText("Imprimir Pdf");
+        jButton1.setBackground(new java.awt.Color(51, 51, 255));
+        jButton1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Imprimir");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(204, 51, 255));
-        jButton2.setText("Regresar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel1.setText("Genera Pdf");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(131, 131, 131)
-                .addComponent(jButton1)
-                .addContainerGap(173, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(31, 31, 31))
+                .addGap(146, 146, 146)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(jButton1))
+                .addContainerGap(161, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(152, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addComponent(jLabel1)
+                .addGap(79, 79, 79)
                 .addComponent(jButton1)
-                .addGap(60, 60, 60)
-                .addComponent(jButton2)
-                .addGap(33, 33, 33))
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -150,7 +145,7 @@ public class PDF extends javax.swing.JFrame {
                 ResultSet rs = pst.executeQuery();
                 Paragraph firma = new Paragraph("Nombre y firma del gerente ");
                 firma.setAlignment(1);
-                Paragraph firma2 = new Paragraph("Alondra de Jesús Firova Ratero");
+                Paragraph firma2 = new Paragraph("Jesus Rodriguez Tejada");
                 firma2.setAlignment(1);
                 Date date = new Date();
                 DateFormat dateformat = new SimpleDateFormat("dd/MM/yyyy");
@@ -176,6 +171,7 @@ public class PDF extends javax.swing.JFrame {
                     documento.add(new Paragraph("Tipo de habitacion: " + rs.getString(6)));
                 }
                 
+                
                 documento.add(new Paragraph("Costo de habitacion: " ));
                 documento.add(new Paragraph("Dias en el hotel: " + rs.getString(10)));
                 documento.add(new Paragraph("Total a pagar sin cargos extras: " ));
@@ -187,8 +183,7 @@ public class PDF extends javax.swing.JFrame {
                 documento.add(new Paragraph(firma2));
                 documento.add(header);
                 documento.add(Chunk.NEWLINE);
-                documento.add(new Paragraph("Ya no vengan ¬¬ !!! "));
-                documento.add(Chunk.NEWLINE);
+                documento.add(new Paragraph("Disfruten al maximo la comidad de nuestras habitaciones y la calidad de servicio que les ofrecemos !!! "));
                 documento.add(Chunk.NEWLINE);
                 documento.add(new Paragraph("Salida completada "));
                         
@@ -211,13 +206,6 @@ public class PDF extends javax.swing.JFrame {
         } catch (Exception e) {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-                MenuSistema Menu = new MenuSistema();
-        Menu.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,11 +240,12 @@ public class PDF extends javax.swing.JFrame {
                 new PDF().setVisible(true);
             }
         });
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
