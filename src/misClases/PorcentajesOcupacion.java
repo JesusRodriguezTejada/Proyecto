@@ -61,6 +61,7 @@ public class PorcentajesOcupacion extends javax.swing.JFrame {
             .addGap(0, 395, Short.MAX_VALUE)
         );
 
+        jToggleButton1.setBackground(new java.awt.Color(204, 255, 204));
         jToggleButton1.setText("atras");
         jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,8 +144,8 @@ private void graficaBarras(){
     }
     private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
         // TODO add your handling code here:
-         MenuPrincipal Regresar = new MenuPrincipal();
-        Regresar.setVisible(true);
+             MenuSistema Menu = new MenuSistema();
+        Menu.setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_jToggleButton1ActionPerformed

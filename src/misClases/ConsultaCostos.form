@@ -30,19 +30,26 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jRadioButtonDoble" min="-2" pref="249" max="-2" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jRadioButtonDoble" min="-2" pref="249" max="-2" attributes="0"/>
+                          <Component id="jLabel1" alignment="0" min="-2" pref="635" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonSencilla" alignment="0" min="-2" pref="249" max="-2" attributes="0"/>
+                          <Component id="jRadioButtonTriple" alignment="0" min="-2" pref="241" max="-2" attributes="0"/>
+                          <Component id="jLabelMostrarPrecio" alignment="0" min="-2" pref="643" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="149" max="32767" attributes="0"/>
+                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
                       <Component id="jButtonMostrarPrecio" min="-2" pref="148" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="178" max="-2" attributes="0"/>
                       <Component id="jButtonLimpiar" min="-2" pref="133" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="jButton1" min="-2" pref="93" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jLabel1" alignment="0" min="-2" pref="635" max="-2" attributes="0"/>
-                  <Component id="jRadioButtonSencilla" alignment="0" min="-2" pref="249" max="-2" attributes="0"/>
-                  <Component id="jRadioButtonTriple" alignment="0" min="-2" pref="241" max="-2" attributes="0"/>
-                  <Component id="jLabelMostrarPrecio" alignment="0" min="-2" pref="643" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="149" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -63,6 +70,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButtonLimpiar" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                   <Component id="jButtonMostrarPrecio" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                  <Component id="jButton1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
           </Group>
@@ -162,6 +170,17 @@
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButtonLimpiarActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="jButton1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="66" green="66" red="0" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="Regresar"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
       </Events>
     </Component>
   </SubComponents>
