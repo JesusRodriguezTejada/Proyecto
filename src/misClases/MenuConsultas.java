@@ -5,6 +5,8 @@
  */
 package misClases;
 
+import test.MenuFinal;
+
 /**
  *
  * @author Alondra paulina v
@@ -14,6 +16,7 @@ public class MenuConsultas extends javax.swing.JFrame {
     /**
      * Creates new form Consultas
      */
+    MenuFinal b = new MenuFinal();
     public MenuConsultas() {
         initComponents();
     }
@@ -201,12 +204,15 @@ public class MenuConsultas extends javax.swing.JFrame {
 
     private void jMenuItemConsultaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaNombreActionPerformed
         // TODO add your handling code here:
-        
+        b.ConsultaPorNom();
+        this.dispose();
 //ConsultaNombre
     }//GEN-LAST:event_jMenuItemConsultaNombreActionPerformed
 
     private void jMenuItemOrdenadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOrdenadosActionPerformed
         // TODO add your handling code here:
+        b.ConsultaOrde();
+        this.dispose();
      //ConsultaOrdenamiento
         
     }//GEN-LAST:event_jMenuItemOrdenadosActionPerformed
@@ -228,18 +234,29 @@ public class MenuConsultas extends javax.swing.JFrame {
     private void jMenuItemIngresosDelHotelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemIngresosDelHotelActionPerformed
         // TODO add your handling code here:
         
+
     }//GEN-LAST:event_jMenuItemIngresosDelHotelActionPerformed
 
     private void jMenuItemPorcentajesOcupacionPorTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPorcentajesOcupacionPorTipoActionPerformed
         // TODO add your handling code here:
+       b.PorcentajesOcupacionHabitacion();
+         this.dispose();
+        
+        
     }//GEN-LAST:event_jMenuItemPorcentajesOcupacionPorTipoActionPerformed
 
     private void jMenuItemTotalDeHabitacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemTotalDeHabitacionesActionPerformed
         // TODO add your handling code here:
+        new TotalHabitaciones().setVisible(true);
+    this.dispose();
     }//GEN-LAST:event_jMenuItemTotalDeHabitacionesActionPerformed
 
     private void jMenuItemOcupacionAlMomentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOcupacionAlMomentoActionPerformed
         // TODO add your handling code here:
+        b.ocupacion();
+        this.dispose();
+        //todo listo 
+        
     }//GEN-LAST:event_jMenuItemOcupacionAlMomentoActionPerformed
 
     private void jMenuItemHabitacionesDisponiblesPorPisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHabitacionesDisponiblesPorPisoActionPerformed
