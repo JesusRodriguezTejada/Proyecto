@@ -40,10 +40,15 @@ public class MenuConsultas extends javax.swing.JFrame {
         jButtonRegrsar = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenuConsultas = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItemCostos = new javax.swing.JMenuItem();
         jMenuItemOrdenados = new javax.swing.JMenuItem();
         jMenuItemConsultaNombre = new javax.swing.JMenuItem();
         jMenuConsultaGleria = new javax.swing.JMenuItem();
+        jMenuItemIngresosDelHotel = new javax.swing.JMenuItem();
+        jMenuItemPorcentajesOcupacionPorTipo = new javax.swing.JMenuItem();
+        jMenuItemTotalDeHabitaciones = new javax.swing.JMenuItem();
+        jMenuItemOcupacionAlMomento = new javax.swing.JMenuItem();
+        jMenuItemHabitacionesDisponiblesPorPiso = new javax.swing.JMenuItem();
 
         jMenuItem1.setText("jMenuItem1");
 
@@ -96,15 +101,15 @@ public class MenuConsultas extends javax.swing.JFrame {
         jMenuConsultas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/misimagenes/consulta.jpg"))); // NOI18N
         jMenuConsultas.setText("Consultas");
 
-        jMenuItem4.setText("Costo Habitaciones");
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        jMenuItemCostos.setText("Costo Habitaciones");
+        jMenuItemCostos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                jMenuItemCostosActionPerformed(evt);
             }
         });
-        jMenuConsultas.add(jMenuItem4);
+        jMenuConsultas.add(jMenuItemCostos);
 
-        jMenuItemOrdenados.setText("Ordenados");
+        jMenuItemOrdenados.setText("Consulta Ordenadacion");
         jMenuItemOrdenados.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemOrdenadosActionPerformed(evt);
@@ -112,7 +117,7 @@ public class MenuConsultas extends javax.swing.JFrame {
         });
         jMenuConsultas.add(jMenuItemOrdenados);
 
-        jMenuItemConsultaNombre.setText("ConsultaNombre");
+        jMenuItemConsultaNombre.setText("Consulta por Nombre");
         jMenuItemConsultaNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItemConsultaNombreActionPerformed(evt);
@@ -127,6 +132,46 @@ public class MenuConsultas extends javax.swing.JFrame {
             }
         });
         jMenuConsultas.add(jMenuConsultaGleria);
+
+        jMenuItemIngresosDelHotel.setText("Ingresos del hotel");
+        jMenuItemIngresosDelHotel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemIngresosDelHotelActionPerformed(evt);
+            }
+        });
+        jMenuConsultas.add(jMenuItemIngresosDelHotel);
+
+        jMenuItemPorcentajesOcupacionPorTipo.setText("Porcentajes de ocupacion por tipo");
+        jMenuItemPorcentajesOcupacionPorTipo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemPorcentajesOcupacionPorTipoActionPerformed(evt);
+            }
+        });
+        jMenuConsultas.add(jMenuItemPorcentajesOcupacionPorTipo);
+
+        jMenuItemTotalDeHabitaciones.setText("Total de habitaciones");
+        jMenuItemTotalDeHabitaciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemTotalDeHabitacionesActionPerformed(evt);
+            }
+        });
+        jMenuConsultas.add(jMenuItemTotalDeHabitaciones);
+
+        jMenuItemOcupacionAlMomento.setText("Ocupacion hasta el momento");
+        jMenuItemOcupacionAlMomento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemOcupacionAlMomentoActionPerformed(evt);
+            }
+        });
+        jMenuConsultas.add(jMenuItemOcupacionAlMomento);
+
+        jMenuItemHabitacionesDisponiblesPorPiso.setText("Habitaciones disponibles piso 1 y 2");
+        jMenuItemHabitacionesDisponiblesPorPiso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemHabitacionesDisponiblesPorPisoActionPerformed(evt);
+            }
+        });
+        jMenuConsultas.add(jMenuItemHabitacionesDisponiblesPorPiso);
 
         jMenuBar1.add(jMenuConsultas);
 
@@ -146,30 +191,23 @@ public class MenuConsultas extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void jMenuItemCostosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCostosActionPerformed
         // TODO add your handling code here:
+        //ConsultaCostos
         ConsultaCostos frot = new ConsultaCostos();
         frot.setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_jMenuItemCostosActionPerformed
 
     private void jMenuItemConsultaNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemConsultaNombreActionPerformed
         // TODO add your handling code here:
         
-       //ConsultaPorNombre form = new ConsultaPorNombre();
-        //form.setVisible(true);
-        //this.dispose();
-        
+//ConsultaNombre
     }//GEN-LAST:event_jMenuItemConsultaNombreActionPerformed
 
     private void jMenuItemOrdenadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOrdenadosActionPerformed
         // TODO add your handling code here:
-        //ConsultaOrden hola = new ConsultaOrden();
-        //hola.setVisible(true);
-       // this.dispose();
-        //ConsultaOrdenamiento hola = new ConsultaOrdenamiento();
-       // hola.setVisible(true);
-       // this.dispose();
+     //ConsultaOrdenamiento
         
     }//GEN-LAST:event_jMenuItemOrdenadosActionPerformed
 
@@ -186,6 +224,27 @@ public class MenuConsultas extends javax.swing.JFrame {
         Consulta1.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jMenuConsultaGleriaActionPerformed
+
+    private void jMenuItemIngresosDelHotelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemIngresosDelHotelActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jMenuItemIngresosDelHotelActionPerformed
+
+    private void jMenuItemPorcentajesOcupacionPorTipoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemPorcentajesOcupacionPorTipoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemPorcentajesOcupacionPorTipoActionPerformed
+
+    private void jMenuItemTotalDeHabitacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemTotalDeHabitacionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemTotalDeHabitacionesActionPerformed
+
+    private void jMenuItemOcupacionAlMomentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemOcupacionAlMomentoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemOcupacionAlMomentoActionPerformed
+
+    private void jMenuItemHabitacionesDisponiblesPorPisoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemHabitacionesDisponiblesPorPisoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuItemHabitacionesDisponiblesPorPisoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -236,10 +295,15 @@ public class MenuConsultas extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItemConsultaNombre;
+    private javax.swing.JMenuItem jMenuItemCostos;
+    private javax.swing.JMenuItem jMenuItemHabitacionesDisponiblesPorPiso;
+    private javax.swing.JMenuItem jMenuItemIngresosDelHotel;
+    private javax.swing.JMenuItem jMenuItemOcupacionAlMomento;
     private javax.swing.JMenuItem jMenuItemOrdenados;
+    private javax.swing.JMenuItem jMenuItemPorcentajesOcupacionPorTipo;
+    private javax.swing.JMenuItem jMenuItemTotalDeHabitaciones;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
