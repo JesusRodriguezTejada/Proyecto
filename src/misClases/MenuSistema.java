@@ -8,16 +8,18 @@ package misClases;
 import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import test.MenuFinal;
 
 /**
  *
  * @author Alondra paulina v
  */
 public class MenuSistema extends javax.swing.JFrame {
-
+    MenuFinal a = new MenuFinal();
     /**
      * Creates new form MenuPrincipal
      */
+    
     public MenuSistema() {
         initComponents();
         ImageIcon reservacion = new ImageIcon("src/misimagenes/reservacion1.png");
@@ -182,17 +184,19 @@ public class MenuSistema extends javax.swing.JFrame {
 
     private void jButtonInActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInActionPerformed
         // TODO add your handling code here:
-        Checkin panel = new Checkin();
-        panel.setVisible(true);
+        a.checkin();
+        //Checkin panel = new Checkin();
+       // panel.setVisible(true);
         this.dispose();
         
     }//GEN-LAST:event_jButtonInActionPerformed
 
     private void jButtonOutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOutActionPerformed
         // TODO add your handling code here:
-                Checkout menu = new Checkout();
-        menu.setVisible(true);
-        this.dispose();
+               // Checkout menu = new Checkout();
+       // menu.setVisible(true);
+        a.checkout();
+         this.dispose();
         
     }//GEN-LAST:event_jButtonOutActionPerformed
 
