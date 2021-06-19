@@ -44,8 +44,8 @@ public class test {
     MySqlConn a = new MySqlConn();
 
     public test() {
-         new Checkin(objConn).setVisible(true);
-
+        // new Checkin(objConn).setVisible(true);
+         new ConsultaHabitacion(objConn).setVisible(true);
         //new Checkout(objConn).setVisible(true);
         //new ConsultaPorNombre(objConn).setVisible(true);
 
@@ -82,8 +82,9 @@ public class test {
         
 
         //PorcentajesOcupacionHabitacion();
-  
-
+    public static void main(String[] args) {
+        new test();
+    }
 
     }
     
@@ -102,14 +103,11 @@ public class test {
       //  new PorcentajesOcupacion(objConn).setVisible(true);
    // }
 
-    //public void check_in() {
-      //  new Checkin(objConn).setVisible(true);
+    //public void chek(); {
+      // new Checkin(objConn).setVisible(true);
 
   //  }
 
-   public static void main(String[] args) {
-
-       new test();
- }
+    ps
 
 

@@ -89,8 +89,8 @@ public class MenuFinal {
            new Login(objConn).setVisible(true);
     }
 
-    public void  ocupacion() {
-        new Ocupacion().setVisible(true);
+    public void  ocupacion() throws SQLException {
+        new Ocupacion(objConn).setVisible(true);
     }
 
     public  void porcentajesOcupacion() {
