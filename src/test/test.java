@@ -45,12 +45,17 @@ public class test {
 
     public test() {
          new Checkin(objConn).setVisible(true);
+<<<<<<< HEAD
         //new Checkout(objConn).setVisible(true);
         //new ConsultaPorNombre(objConn).setVisible(true);
+=======
+       // new Checkout(objConn).setVisible(true);
+       // new ConsultaPorNombre(objConn).setVisible(true);
+>>>>>>> b220910db88f45b06fb31a708abe445baa8c99de
         //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
        //new ConsultaPorHabitacion(objConn).setVisible(true);
 
-
+    }
    // public test() {       
 
       //new Checkin(objConn).setVisible(true);
@@ -67,8 +72,13 @@ public class test {
         //new ConsultaPorNombre(objConn).setVisible(true);
         //new ConsultaOrdenAlfabetico(objConn).setVisible(true);
        //new ConsultaPorHabitacion(objConn).setVisible(true);
+<<<<<<< HEAD
        // new PorcentajesOcupacion(objConn).setVisible(true);
         //PorcentajesOcupacionHabitacion();
+=======
+
+      //  PorcentajesOcupacionHabitacion();
+>>>>>>> b220910db88f45b06fb31a708abe445baa8c99de
         
 
         //PorcentajesOcupacionHabitacion();
@@ -77,6 +87,7 @@ public class test {
 
     }
     
+<<<<<<< HEAD
     
     
     
@@ -93,11 +104,29 @@ public class test {
 
     //public void check_in() {
       //  new Checkin(objConn).setVisible(true);
+=======
+ //   public void PorcentajesOcupacionHabitacion(){
+ //       new PorcentajesOcupacion(objConn).setVisible(true);
+ //   }
+
+  //  public void chek() {
+ //       new Checkin(objConn).setVisible(true);
+>>>>>>> b220910db88f45b06fb31a708abe445baa8c99de
   //  }
 
-    public static void main(String[] args) {
-        new test();
-    }
+   public static void main(String[] args) {
 
+       new test();
+ }
 
-}
+<<<<<<< HEAD
+=======
+  // public int ocupacion() {
+   // int x = 0;
+       
+    
+ //   return x ;
+//
+
+>>>>>>> b220910db88f45b06fb31a708abe445baa8c99de
+

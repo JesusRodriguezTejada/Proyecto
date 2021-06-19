@@ -375,12 +375,28 @@ public class Checkin extends javax.swing.JFrame {
          JOptionPane.showMessageDialog(null, "Registro exitoso");
            ImprimirComprobante imprimir = new ImprimirComprobante();
             imprimir.setVisible(true);
-            imprimir.jTextAreaComprobante.setText("Nombre" +nombre+ "\n"
-            +"Ciudad de origen" +ciudad+"\n"
-            //+"Ingreso"+fechaEntrada+"\n"
-            //+"Fecha de salida"+fechaSalida+
-              +"Habitacion"+tipoHabitacion+"\n"
-              +"Total de personas registradas en esta habitacion"+personas+"\n"
+                       String limite = "";
+                      if("Sencilla".equals(tipoHabitacion)){
+                      limite = "2";
+                        
+                    }
+                   if("Doble".equals(tipoHabitacion) ){
+                      limite = "5" ; 
+                    }
+                    if("Triple".equals(tipoHabitacion) ){
+                      limite = "8" ; 
+                    }
+                    
+                   
+            imprimir.jTextAreaComprobante.setText("Nombre: " +nombre+ "\n"
+            +"Ciudad de origen: " +ciudad+"\n"
+            +"Ingreso: "+fechaEntrada+"\n"
+            +"FechaSalida: "+fechaSalida+"\n"
+            +"Numero Habitacion: :"+numHab+"\n"
+              +"Habitacion: "+tipoHabitacion+"\n"
+              +"Limite huespedes:"+limite+"\n"
+              +"Personas por habitacion:"+personas+"\n"
+              +"Personas Extra :"+personasExtras+"\n"
                     
             
             

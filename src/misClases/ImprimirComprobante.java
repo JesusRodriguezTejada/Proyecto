@@ -50,7 +50,7 @@ public class ImprimirComprobante extends javax.swing.JFrame {
 
         jTextAreaComprobante.setBackground(new java.awt.Color(204, 231, 156));
         jTextAreaComprobante.setColumns(20);
-        jTextAreaComprobante.setFont(new java.awt.Font("Eras Demi ITC", 1, 12)); // NOI18N
+        jTextAreaComprobante.setFont(new java.awt.Font("Eras Demi ITC", 1, 11)); // NOI18N
         jTextAreaComprobante.setForeground(new java.awt.Color(29, 77, 65));
         jTextAreaComprobante.setRows(5);
         jScrollPane1.setViewportView(jTextAreaComprobante);
